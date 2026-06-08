@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --cinematic-layout: 3;
+  --cinematic-layout: 4;
   --paper: #090908;
   --ink: #eeeae0;
   --coral: #b99a5b;
@@ -44,6 +44,7 @@ a:focus-visible, button:focus-visible { outline: 1px solid currentColor; outline
 .section-title { font-family: Arial, Helvetica, sans-serif; font-size: clamp(3rem, 7vw, 6.7rem); font-weight: 600; line-height: .91; letter-spacing: -.07em; }
 .main-nav { min-height: 5rem; display: flex; align-items: center; justify-content: space-between; }
 .nav-items { display: flex; align-items: center; gap: 2rem; font-size: .72rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.menu-toggle { display: none; }
 .logo { display: inline-flex; align-items: flex-end; color: var(--ink); line-height: 1; }
 .logo-word { font-family: Georgia, "Times New Roman", serif; font-size: 1.9rem; letter-spacing: -.08em; }
 .logo-bin { position: relative; width: 1.05rem; height: 1.3rem; margin: 0 .18rem .04rem .22rem; border: 1px solid var(--coral); border-top-width: 2px; }
@@ -122,14 +123,20 @@ a:focus-visible, button:focus-visible { outline: 1px solid currentColor; outline
 
 @media (max-width: 639px) {
   .page-shell { width: min(100% - 2rem, 88rem); }
-  .main-nav { min-height: 7.25rem; flex-direction: column; align-items: stretch; justify-content: center; gap: .65rem; padding-block: .8rem; }
+  .site-nav { position: fixed; width: 100%; }
+  .main-nav { position: relative; min-height: 4.5rem; flex-direction: row; align-items: center; justify-content: space-between; gap: 1rem; padding-block: .7rem; }
   .logo-word { font-size: 1.55rem; }
   .logo-bin { margin-inline: .08rem; transform: scale(.88); }
-  .nav-items { width: 100%; display: flex; justify-content: flex-start; gap: 0; overflow-x: auto; border-top: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); font-size: .58rem; scrollbar-width: none; }
-  .nav-items::-webkit-scrollbar { display: none; }
-  .nav-link { min-width: max-content; min-height: 2.75rem; display: inline-flex; flex: 1 0 auto; align-items: center; justify-content: center; padding-inline: .85rem; }
-  .nav-link + .nav-link { border-left: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
-  .hero .page-shell { min-height: calc(100svh - 7.25rem); padding-block: 3.5rem; }
+  .menu-toggle { width: 2.75rem; height: 2.75rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .45rem; border: 1px solid color-mix(in srgb, var(--ink) 25%, transparent); }
+  .menu-toggle span { width: 1rem; height: 1px; background: var(--ink); transition: transform 250ms ease; }
+  .menu-toggle-open span:first-child { transform: translateY(.25rem) rotate(45deg); }
+  .menu-toggle-open span:last-child { transform: translateY(-.25rem) rotate(-45deg); }
+  .nav-items { position: absolute; top: 100%; right: -1rem; left: -1rem; max-height: 0; display: flex; flex-direction: column; align-items: stretch; gap: 0; overflow: hidden; border-bottom: 1px solid transparent; background: rgba(5, 5, 5, .98); font-size: .68rem; opacity: 0; pointer-events: none; transition: max-height 300ms ease, opacity 200ms ease, border-color 200ms ease; }
+  .nav-items-open { max-height: 24rem; border-color: color-mix(in srgb, var(--ink) 14%, transparent); opacity: 1; pointer-events: auto; }
+  .nav-link { min-height: 3.4rem; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); padding-inline: 1rem; }
+  .nav-link::after { position: static; width: .45rem; height: .45rem; border: 1px solid currentColor; border-radius: 50%; background: transparent; transform: none; }
+  .hero .page-shell { min-height: calc(100svh - 4.5rem); padding-block: 3.5rem; }
+  .site-content { padding-top: 4.5rem; }
   .hero-title { font-size: clamp(4.6rem, 25vw, 7rem); }
   .hero::after { width: 72vw; right: -28%; top: 13%; }
   .button-dark, .button-light, .button-outline, .button-ghost { min-height: 3rem; padding-inline: 1rem; }
@@ -374,7 +381,8 @@ a:focus-visible, button:focus-visible { outline: 1px solid currentColor; outline
   .legal-page .section-title { font-size: clamp(2rem, 8.5vw, 3.4rem); overflow-wrap: normal; hyphens: auto; }
   .legal-content { margin-top: 3rem; }
   .hero {
-    min-height: calc(100svh - 7.25rem);
+    min-height: calc(100svh - 4.5rem);
+    padding-top: 0;
   }
 
   .hero-image {
@@ -388,7 +396,7 @@ a:focus-visible, button:focus-visible { outline: 1px solid currentColor; outline
   }
 
   .hero-content {
-    min-height: calc(100svh - 7.25rem);
+    min-height: calc(100svh - 4.5rem);
     align-items: end;
     padding-block: 4rem 5rem;
   }

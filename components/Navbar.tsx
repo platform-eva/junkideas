@@ -14,6 +14,7 @@ const links = [
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const sections = ["projects", "collaborations", "live", "about", "contact"]
@@ -41,12 +42,23 @@ export default function Navbar() {
     <header className="site-nav">
       <nav className="main-nav" aria-label="Main navigation">
         <Logo />
-        <div className="nav-items">
+        <button
+          aria-expanded={menuOpen}
+          aria-label={menuOpen ? "Menü schließen" : "Menü öffnen"}
+          className={`menu-toggle ${menuOpen ? "menu-toggle-open" : ""}`}
+          onClick={() => setMenuOpen((open) => !open)}
+          type="button"
+        >
+          <span />
+          <span />
+        </button>
+        <div className={`nav-items ${menuOpen ? "nav-items-open" : ""}`}>
           {links.map((link) => (
             <Link
               className={`nav-link ${activeSection === link.href.slice(2) ? "nav-link-active" : ""}`}
               href={link.href}
               key={link.href}
+              onClick={() => setMenuOpen(false)}
             >
               {link.label}
             </Link>
