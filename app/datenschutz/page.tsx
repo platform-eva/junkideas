@@ -54,10 +54,11 @@ export default function DatenschutzPage() {
         <h2>5. Vimeo-Video</h2>
         <p>
           Auf dieser Website kann ein Video des Anbieters Vimeo geladen werden.
-          Das Video wird erst nach ausdrücklicher Zustimmung der Nutzerin oder
-          des Nutzers eingebunden. Beim Laden wird eine Verbindung zu Vimeo
-          hergestellt; dabei können insbesondere IP-Adresse und technische
-          Nutzungsdaten an Vimeo übertragen werden. Anbieter ist Vimeo.com,
+          Eingebettete Videos werden erst nach ausdrücklicher Zustimmung
+          geladen. Weitere Teaser sind lediglich extern verlinkt. Beim Laden
+          eines Videos oder Anklicken eines Vimeo-Links wird eine Verbindung zu
+          Vimeo hergestellt; dabei können insbesondere IP-Adresse und
+          technische Nutzungsdaten übertragen werden. Anbieter ist Vimeo.com,
           Inc., 330 West 34th Street, New York, New York 10001, USA.
         </p>
       </section>

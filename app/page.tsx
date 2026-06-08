@@ -21,9 +21,9 @@ const featuredProjects = [
     year: "Germany & Bolivia, 2026",
     description:
       "An experimental documentary project about memory, inheritance and the stories carried by a dress.",
-    href: "https://vimeo.com/manage/videos/1122993615",
+    href: "#mothers-dress",
     accent: "rose" as const,
-    label: "Watch teaser",
+    label: "Teaser & Details",
     status: "Work in progress",
   },
 ];
@@ -67,7 +67,7 @@ export default function Home() {
           </div>
         </div>
 
-        <VimeoEmbed />
+        <VimeoEmbed title="The Secret of the Charango" videoId="835266930" />
 
         <div className="charango-info mt-12 grid gap-12 lg:grid-cols-[1fr_1fr]">
           <div>
@@ -117,6 +117,45 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="film-detail page-shell pb-20 sm:pb-28" id="mothers-dress">
+        <div className="mb-10 grid gap-8 border-t border-ink/20 pt-12 lg:grid-cols-[0.45fr_1.55fr]">
+          <div>
+            <p className="eyebrow">Work in Progress</p>
+            <p className="mt-4 text-sm text-ink/45">Deutschland & Bolivien · 2026</p>
+          </div>
+          <div>
+            <h2 className="section-title max-w-5xl">My mother&apos;s dress</h2>
+            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink/65">
+              Ein experimentelles autobiografisches Dokumentarfilmprojekt über
+              Erinnerung, Herkunft und die Geschichten, die ein Kleid in sich
+              trägt.
+            </p>
+          </div>
+        </div>
+        <VimeoEmbed
+          embedEnabled={false}
+          externalUrl="https://vimeo.com/1122993615"
+          title="My mother's dress · Teaser"
+          videoId="1122993615"
+        />
+        <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_1fr]">
+          <div>
+            <p className="eyebrow mb-6">Credits</p>
+            <dl className="credits-list">
+              <div><dt>Idea, Direction & Music</dt><dd>Bärbel Junk</dd></div>
+              <div><dt>Cinematography</dt><dd>Felipe Quiroga Alvarez Daza</dd></div>
+            </dl>
+          </div>
+          <div className="detail-panel">
+            <p className="eyebrow">Status</p>
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink/60">
+              Der Film befindet sich aktuell in Entwicklung. Weitere Einblicke,
+              Beteiligte und Termine werden hier ergänzt.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="all-projects-section page-shell pb-20 sm:pb-28" id="collaborations">
         <div className="mb-8 flex items-center gap-5">
           <h2 className="font-display text-4xl tracking-[-0.04em]">Kollaborationen</h2>
@@ -130,7 +169,7 @@ export default function Home() {
           <ProjectCard
             accent="blue"
             category="Film"
-            description="Ein Filmprojekt in Entwicklung, mit Koproduktion und Musik von Bärbel Junk."
+            description="Ein Spielfilm in Entwicklung. Koproduktion und Musik: Bärbel Junk."
             href="https://www.instagram.com/pianoman.lapelicula/"
             label="Auf Instagram folgen"
             status="In Entwicklung"
@@ -149,7 +188,7 @@ export default function Home() {
           <ProjectCard
             accent="sun"
             category="Szenisch-musikalische Lesung"
-            description="Eine musikalische Lesung, die die spielerische Welt des Kinderbuchs auf die Bühne bringt."
+            description="Eine szenisch-musikalische Lesung zum Kinderbuch von Tabea Michel."
             href="https://verlag-andreaschroeder.com/shop/ols/products/beim-friseur"
             label="Buch entdecken"
             title="Beim Frisör"
