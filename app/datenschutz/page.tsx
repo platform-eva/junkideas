@@ -51,7 +51,18 @@ export default function DatenschutzPage() {
         </p>
       </section>
       <section>
-        <h2>5. Rechte betroffener Personen</h2>
+        <h2>5. Vimeo-Video</h2>
+        <p>
+          Auf dieser Website kann ein Video des Anbieters Vimeo geladen werden.
+          Das Video wird erst nach ausdrücklicher Zustimmung der Nutzerin oder
+          des Nutzers eingebunden. Beim Laden wird eine Verbindung zu Vimeo
+          hergestellt; dabei können insbesondere IP-Adresse und technische
+          Nutzungsdaten an Vimeo übertragen werden. Anbieter ist Vimeo.com,
+          Inc., 330 West 34th Street, New York, New York 10001, USA.
+        </p>
+      </section>
+      <section>
+        <h2>6. Rechte betroffener Personen</h2>
         <p>
           Betroffene Personen haben im Rahmen der gesetzlichen Voraussetzungen
           das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der
@@ -60,7 +71,7 @@ export default function DatenschutzPage() {
         </p>
       </section>
       <section>
-        <h2>6. Stand und Änderungen</h2>
+        <h2>7. Stand und Änderungen</h2>
         <p>
           Stand: Juni 2026. Diese Datenschutzerklärung muss angepasst werden,
           wenn weitere Dienste, eingebettete Medien, Formulare,

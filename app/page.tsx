@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Hero from "@/components/Hero";
 import ProjectCard from "@/components/ProjectCard";
+import VimeoEmbed from "@/components/VimeoEmbed";
 
 const featuredProjects = [
   {
@@ -10,9 +11,9 @@ const featuredProjects = [
     year: "Bolivia & Germany, 2023",
     description:
       "An intercultural film shaped by movement, original music and encounters across two countries.",
-    href: "https://vimeo.com/835266930?fl=ip&fe=ec",
+    href: "#charango",
     accent: "sun" as const,
-    label: "Watch film",
+    label: "Film & Details",
   },
   {
     title: "My mother's dress",
@@ -48,6 +49,71 @@ export default function Home() {
           {featuredProjects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
+        </div>
+      </section>
+
+      <section className="charango-detail page-shell pb-20 sm:pb-28" id="charango">
+        <div className="mb-10 grid gap-8 border-t border-ink/20 pt-12 lg:grid-cols-[0.45fr_1.55fr]">
+          <div>
+            <p className="eyebrow">Film im Fokus</p>
+            <p className="mt-4 text-sm text-ink/45">Bolivien & Deutschland · 2023</p>
+          </div>
+          <div>
+            <h2 className="section-title max-w-5xl">The Secret of the Charango</h2>
+            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink/65">
+              Ein interkultureller experimenteller Kurzfilm, entstanden aus
+              Begegnungen, Bewegung und Musik zwischen Bolivien und Deutschland.
+            </p>
+          </div>
+        </div>
+
+        <VimeoEmbed />
+
+        <div className="charango-info mt-12 grid gap-12 lg:grid-cols-[1fr_1fr]">
+          <div>
+            <p className="eyebrow mb-6">Credits</p>
+            <dl className="credits-list">
+              <div><dt>Idea, Direction & Production</dt><dd>Bärbel Junk</dd></div>
+              <div><dt>Cinematography</dt><dd>Felipe Quiroga Álvarez Daza</dd></div>
+              <div><dt>Choreography & Dance Performance</dt><dd>Marie Haußdörfer</dd></div>
+              <div><dt>Original Music</dt><dd>Bernardo Rosado Ramos</dd></div>
+              <div><dt>Production Bolivia</dt><dd>Paola Jhanitsa Cáceres</dd></div>
+              <div><dt>Costume Design</dt><dd>Isabel Jurado Chávez</dd></div>
+              <div><dt>Production Assistant Bolivia & Driver</dt><dd>Eulogio Huaqui Ticona</dd></div>
+              <div><dt>Production Assistant Germany</dt><dd>Florian Federl</dd></div>
+              <div><dt>Post Production / Color Correction</dt><dd>Luís Tapia Heredia ICG (Alborcine)</dd></div>
+              <div><dt>Music Recording</dt><dd>Daniel Prieto</dd></div>
+              <div><dt>Music Mastering</dt><dd>Omar Corrales Cerff (Gatoverde Studio)</dd></div>
+              <div><dt>Still Photography Bolivia</dt><dd>Daniel Quiroga Miranda, Alice Michelle Coronel Almaraz</dd></div>
+              <div><dt>Still Photography Germany</dt><dd>Jan-Peter Schulz</dd></div>
+              <div><dt>Poster Design</dt><dd>Maria Callejas Guimaraes</dd></div>
+              <div><dt>Special Appearance</dt><dd>Heidrun Haußdörfer</dd></div>
+            </dl>
+          </div>
+          <div>
+            <div className="detail-panel">
+              <p className="eyebrow">Auszeichnungen</p>
+              <ul className="awards-list">
+                <li>Best Experimental Short · Liverpool Indie Awards 2024</li>
+                <li>Official Selection · Budapest Movie Awards 2023</li>
+                <li>Official Selection · Prague Music Video Awards 2023</li>
+              </ul>
+              <a
+                className="text-link mt-8"
+                href="https://online.anyflip.com/pxdko/xcfa/mobile/index.html"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Pressebeitrag lesen ↗
+              </a>
+            </div>
+            <blockquote className="gratitude-note">
+              With gratitude for all the lovely people in Bolivia and Germany,
+              friends, supporters and crowd-funders all over the world, our
+              cherished hosts and my beloved family, without whom this project
+              never would have been possible.
+            </blockquote>
+          </div>
         </div>
       </section>
 

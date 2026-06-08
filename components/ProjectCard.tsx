@@ -26,6 +26,8 @@ export default function ProjectCard({
   label,
   status,
 }: ProjectCardProps) {
+  const isInternal = href.startsWith("#") || href.startsWith("/");
+
   return (
     <article className="project-card group flex h-full flex-col overflow-hidden">
       <div className={`project-visual ${accentClasses[accent]}`}>
@@ -41,7 +43,12 @@ export default function ProjectCard({
         </h3>
         <p className="mt-2 text-sm font-semibold text-ink/55">{year}</p>
         <p className="mt-5 flex-1 leading-relaxed text-ink/70">{description}</p>
-        <a className="text-link mt-7" href={href} rel="noreferrer" target="_blank">
+        <a
+          className="text-link mt-7"
+          href={href}
+          rel={isInternal ? undefined : "noreferrer"}
+          target={isInternal ? undefined : "_blank"}
+        >
           {label} <span aria-hidden="true">↗</span>
         </a>
       </div>
