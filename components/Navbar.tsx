@@ -2,9 +2,9 @@ import Link from "next/link";
 import Logo from "@/components/Logo";
 
 const links = [
-  { href: "/about", label: "Über uns" },
-  { href: "/projects", label: "Projekte" },
-  { href: "/contact", label: "Kontakt" },
+  { href: "/#about", label: "Über uns" },
+  { href: "/#projects", label: "Projekte" },
+  { href: "/#contact", label: "Kontakt" },
 ];
 
 export default function Navbar() {

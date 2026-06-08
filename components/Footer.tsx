@@ -12,8 +12,8 @@ export default function Footer() {
           </p>
         </div>
         <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm font-bold uppercase tracking-wider sm:justify-end">
-          <Link href="/projects">Projects</Link>
-          <Link href="/about">About</Link>
+          <Link href="/#projects">Projekte</Link>
+          <Link href="/#about">Über uns</Link>
           <a href="https://www.instagram.com/pianoman.lapelicula/" rel="noreferrer" target="_blank">
             Instagram
           </a>

@@ -26,7 +26,7 @@ export default function Hero() {
             Abenteuer zwischen Deutschland und Bolivien.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link className="story-link" href="/projects">
+            <Link className="story-link" href="#projects">
               <span aria-hidden="true">▶</span> Aktuelle Projekte ansehen
             </Link>
           </div>
