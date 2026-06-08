@@ -25,16 +25,6 @@ const featuredProjects = [
     label: "Watch teaser",
     status: "Work in progress",
   },
-  {
-    title: "Von Ümpfen, Strümpfen und (K)Einhörnern",
-    category: "Music Theatre",
-    year: "Die Glorreichen Fünf",
-    description:
-      "A playful music theatre production full of strange creatures, sounds and unexpected turns.",
-    href: "http://www.henrike-baumgart.de/?q=content/von-uempfen-struempfen-und-keinhoernern",
-    accent: "blue" as const,
-    label: "Discover piece",
-  },
 ];
 
 export default function Home() {
@@ -45,28 +35,32 @@ export default function Home() {
       <section className="projects-home page-shell py-20 sm:py-28" id="projects">
         <div className="mb-10 flex flex-col gap-5 sm:mb-14 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="eyebrow">Selected work</p>
+            <p className="eyebrow">Eigene Projekte</p>
             <h2 className="section-title max-w-3xl">
-              Films, music and stories that refuse to stay in one box.
+              Filme zwischen Erinnerung, Musik und Begegnung.
             </h2>
           </div>
-          <Link className="text-link shrink-0" href="#all-projects">
-            Alle Projekte <span aria-hidden="true">↓</span>
+          <Link className="text-link shrink-0" href="#collaborations">
+            Kollaborationen <span aria-hidden="true">↓</span>
           </Link>
         </div>
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2">
           {featuredProjects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
         </div>
       </section>
 
-      <section className="all-projects-section page-shell pb-20 sm:pb-28" id="all-projects">
+      <section className="all-projects-section page-shell pb-20 sm:pb-28" id="collaborations">
         <div className="mb-8 flex items-center gap-5">
-          <h2 className="font-display text-4xl tracking-[-0.04em]">Weitere Projekte</h2>
+          <h2 className="font-display text-4xl tracking-[-0.04em]">Kollaborationen</h2>
           <div className="h-px flex-1 bg-ink/20" />
         </div>
-        <div className="grid gap-6 md:grid-cols-2">
+        <p className="mb-10 max-w-2xl text-lg leading-relaxed text-ink/60">
+          Projekte, die gemeinsam mit Künstlerinnen, Künstlern und Ensembles
+          entstehen.
+        </p>
+        <div className="grid gap-6 lg:grid-cols-3">
           <ProjectCard
             accent="blue"
             category="Film"
@@ -76,6 +70,15 @@ export default function Home() {
             status="In Entwicklung"
             title="Pianoman by Felipe Quiroga"
             year="Bolivien, 2026"
+          />
+          <ProjectCard
+            accent="green"
+            category="Musiktheater"
+            description="Ein Kindermusiktheater der Künstlergruppe Die Glorreichen Fünf."
+            href="http://www.henrike-baumgart.de/?q=content/von-uempfen-struempfen-und-keinhoernern"
+            label="Stück entdecken"
+            title="Von Ümpfen, Strümpfen und (K)Einhörnern"
+            year="Die Glorreichen Fünf"
           />
           <ProjectCard
             accent="sun"
@@ -89,11 +92,29 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="live-section page-shell py-20 sm:py-28" id="live">
+        <div className="grid gap-10 border-y border-ink/20 py-12 lg:grid-cols-[0.45fr_1.55fr]">
+          <div>
+            <p className="eyebrow">Live-Termine</p>
+            <p className="mt-4 text-sm text-ink/45">Screenings · Musik · Theater</p>
+          </div>
+          <div>
+            <h2 className="section-title max-w-4xl">
+              Neue Termine sind in Planung.
+            </h2>
+            <p className="mt-8 max-w-xl text-lg leading-relaxed text-ink/60">
+              Informationen zu kommenden Vorführungen, Konzerten und
+              Musiktheater-Terminen werden hier veröffentlicht.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="about-home page-shell py-20 sm:py-28" id="about">
         <div className="grid gap-8 border-b border-ink/20 pb-12 lg:grid-cols-[0.45fr_1.55fr]">
-          <p className="eyebrow">Über uns</p>
+          <p className="eyebrow">Über mich</p>
           <h2 className="section-title max-w-5xl">
-            Bärbel Junk arbeitet zwischen Film, Musik und Theater.
+            Bärbel Junk ist Music & Film Artist.
           </h2>
         </div>
         <div className="about-portrait mt-12">
@@ -121,8 +142,8 @@ export default function Home() {
               komponiert.
             </p>
             <p>
-              Junkideas ist der Raum für diese kollaborative Praxis: für
-              experimentelle Filme, eigene Musik und szenisches Erzählen.
+              Junkideas ist der Raum für eigene Projekte und Kollaborationen:
+              für experimentelle Filme, Musik und szenisches Erzählen.
             </p>
           </div>
         </div>

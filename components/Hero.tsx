@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="hero-shade" />
       <div className="hero-content">
         <div className="hero-copy">
-          <p className="eyebrow">Junkideas · Bärbel Junk</p>
+          <p className="eyebrow">Bärbel Junk · Music & Film Artist</p>
           <h1 className="hero-story">
             Aus Schnapsideen
             <span>werden Geschichten.</span>

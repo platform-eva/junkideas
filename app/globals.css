@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --cinematic-layout: 2;
+  --cinematic-layout: 3;
   --paper: #090908;
   --ink: #eeeae0;
   --coral: #b99a5b;
@@ -60,6 +60,8 @@ a:focus-visible, button:focus-visible { outline: 1px solid currentColor; outline
 .nav-link::after { position: absolute; right: 0; bottom: .2rem; left: 0; height: 1px; background: var(--ink); content: ""; transform: scaleX(0); transform-origin: right; transition: transform 250ms ease; }
 .nav-link:hover { color: var(--ink); }
 .nav-link:hover::after { transform: scaleX(1); transform-origin: left; }
+.nav-link-active { color: var(--coral); }
+.nav-link-active::after { background: var(--coral); transform: scaleX(1); }
 
 .button-dark, .button-light, .button-outline, .button-ghost {
   display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--ink); padding: .9rem 1.25rem;
@@ -103,6 +105,14 @@ a:focus-visible, button:focus-visible { outline: 1px solid currentColor; outline
 .about-monogram p { max-width: 15rem; font-size: .62rem; font-weight: 700; letter-spacing: .18em; line-height: 1.7; text-transform: uppercase; }
 .feature-statement { background: #11110f; }
 .site-footer { border-top: 1px solid color-mix(in srgb, var(--ink) 18%, transparent); background: #050505; color: var(--ink); }
+.legal-page { min-height: 100svh; padding-block: 10rem 7rem; }
+.legal-content { max-width: 52rem; margin-top: 5rem; }
+.legal-content section { border-top: 1px solid color-mix(in srgb, var(--ink) 18%, transparent); padding-block: 2rem; }
+.legal-content h2 { margin-bottom: 1rem; color: var(--coral); font-size: .7rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.legal-content p { color: color-mix(in srgb, var(--ink) 68%, transparent); line-height: 1.8; }
+.legal-content p + p { margin-top: 1rem; }
+.legal-content strong { color: var(--coral); font-weight: 700; }
+.legal-warning { margin-top: 2rem; border: 1px solid var(--coral); padding: 1.25rem; color: var(--coral); font-size: .8rem; line-height: 1.7; }
 
 @media (hover: none) {
   .project-card:hover { transform: none; }
@@ -115,8 +125,9 @@ a:focus-visible, button:focus-visible { outline: 1px solid currentColor; outline
   .main-nav { min-height: 7.25rem; flex-direction: column; align-items: stretch; justify-content: center; gap: .65rem; padding-block: .8rem; }
   .logo-word { font-size: 1.55rem; }
   .logo-bin { margin-inline: .08rem; transform: scale(.88); }
-  .nav-items { width: 100%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); font-size: .62rem; }
-  .nav-link { min-height: 2.75rem; display: inline-flex; align-items: center; justify-content: center; padding-inline: .25rem; }
+  .nav-items { width: 100%; display: flex; justify-content: flex-start; gap: 0; overflow-x: auto; border-top: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); font-size: .58rem; scrollbar-width: none; }
+  .nav-items::-webkit-scrollbar { display: none; }
+  .nav-link { min-width: max-content; min-height: 2.75rem; display: inline-flex; flex: 1 0 auto; align-items: center; justify-content: center; padding-inline: .85rem; }
   .nav-link + .nav-link { border-left: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
   .hero .page-shell { min-height: calc(100svh - 7.25rem); padding-block: 3.5rem; }
   .hero-title { font-size: clamp(4.6rem, 25vw, 7rem); }
@@ -155,11 +166,6 @@ a:focus-visible, button:focus-visible { outline: 1px solid currentColor; outline
   margin-inline: auto;
 }
 
-.nav-quote,
-.nav-credit {
-  display: none;
-}
-
 .site-content {
   min-width: 0;
   flex: 1;
@@ -167,6 +173,8 @@ a:focus-visible, button:focus-visible { outline: 1px solid currentColor; outline
 
 #projects,
 #all-projects,
+#collaborations,
+#live,
 #about,
 #contact {
   scroll-margin-top: 6rem;
@@ -336,20 +344,6 @@ a:focus-visible, button:focus-visible { outline: 1px solid currentColor; outline
     padding: .75rem 0;
   }
 
-  .nav-quote {
-    display: block;
-    max-width: 12rem;
-    margin: 0 0 0 auto;
-    color: color-mix(in srgb, var(--ink) 45%, transparent);
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: .65rem;
-    line-height: 1.5;
-  }
-
-  .nav-credit {
-    display: none;
-  }
-
   .site-content,
   .site-footer {
     margin-left: 0;
@@ -357,6 +351,8 @@ a:focus-visible, button:focus-visible { outline: 1px solid currentColor; outline
 
   #projects,
   #all-projects,
+  #collaborations,
+  #live,
   #about,
   #contact {
     scroll-margin-top: 5rem;
@@ -374,6 +370,9 @@ a:focus-visible, button:focus-visible { outline: 1px solid currentColor; outline
 }
 
 @media (max-width: 639px) {
+  .legal-page { padding-block: 9rem 5rem; }
+  .legal-page .section-title { font-size: clamp(2rem, 8.5vw, 3.4rem); overflow-wrap: normal; hyphens: auto; }
+  .legal-content { margin-top: 3rem; }
   .hero {
     min-height: calc(100svh - 7.25rem);
   }
