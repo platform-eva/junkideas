@@ -1084,3 +1084,19 @@ button:focus-visible {
     animation-iteration-count: 1 !important;
   }
 }
+.about-heading {
+  max-width: 10ch;
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 850;
+  line-height: 0.86;
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+}
+
+.about-subheading {
+  margin-top: 1.5rem;
+  color: var(--gold);
+  font-size: clamp(1.4rem, 2.8vw, 2.8rem);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.15;
+}

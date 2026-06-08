@@ -218,9 +218,14 @@ export default function Home() {
       <section className="about-home page-shell py-20 sm:py-28" id="about">
         <div className="grid gap-8 border-b border-ink/20 pb-12 lg:grid-cols-[0.45fr_1.55fr]">
           <p className="eyebrow">Über mich</p>
-          <h2 className="section-title max-w-5xl">
-            Bärbel Junk ist Music & Film Artist.
-          </h2>
+          <div>
+  <h2 className="about-heading">
+    Bärbel Junk
+  </h2>
+  <p className="about-subheading">
+    Musik. Film. Begegnungen.
+  </p>
+</div>
         </div>
         <div className="about-portrait mt-12">
           <Image
