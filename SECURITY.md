@@ -8,7 +8,7 @@ Compliance-Nachweis.
 
 ### Vertrauenswürdiges Base-Image
 
-Die Dockerfiles verwenden das offizielle `node:24-alpine`-Image. Alpine enthält
+Die Dockerfiles verwenden das offizielle `node:26-alpine`-Image. Alpine enthält
 weniger Pakete als ein vollständiges Linux-Image und reduziert dadurch die
 Angriffsfläche.
 
