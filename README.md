@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Junkideas
 
-## Getting Started
+Portfolio-Website für Bärbel Junk, umgesetzt mit Next.js, TypeScript, Tailwind
+CSS und dem App Router.
 
-First, run the development server:
+## Lokale Entwicklung ohne Docker
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Die Website ist danach unter <http://localhost:3000> erreichbar.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Entwicklung mit Docker
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+docker compose -f compose.dev.yaml up --build
+```
 
-## Learn More
+Der Quellcode wird eingebunden und Next.js lädt Änderungen automatisch neu.
+Abhängigkeiten und der Next.js-Cache liegen in separaten Docker-Volumes.
 
-To learn more about Next.js, take a look at the following resources:
+## Gehärteter Produktionsbetrieb
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+docker compose up --build -d
+docker compose ps
+docker compose logs -f website
+docker compose down
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Die Produktionskonfiguration verwendet:
 
-## Deploy on Vercel
+- einen minimalen Next.js-Standalone-Build
+- einen nicht privilegierten Benutzer
+- ein schreibgeschütztes Dateisystem
+- entfernte Linux-Capabilities
+- `no-new-privileges`
+- CPU-, RAM- und Prozesslimits
+- flüchtige, begrenzte RAM-Dateisysteme für `/tmp` und den Next.js-Bildcache
+- begrenzte Docker-Logs und einen Healthcheck
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Sicherheitsprüfungen
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm audit --omit=dev --audit-level=high
+docker build -t junkideas:local .
+trivy image --severity HIGH,CRITICAL --ignore-unfixed junkideas:local
+```
+
+GitHub Actions führt diese Prüfungen bei Pushes, Pull Requests und wöchentlich
+automatisch aus. Details stehen in [SECURITY.md](SECURITY.md).
