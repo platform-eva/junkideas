@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import DetailMoodImage from "@/components/DetailMoodImage";
 import Hero from "@/components/Hero";
 import ProjectCard from "@/components/ProjectCard";
 import VimeoEmbed from "@/components/VimeoEmbed";
@@ -14,6 +15,8 @@ const featuredProjects = [
     href: "#charango",
     accent: "sun" as const,
     label: "Film & Details",
+    imageSrc: "/images/charango-poster.webp",
+    imageAlt: "Poster des Films The Secret of the Charango",
   },
   {
     title: "My mother's dress",
@@ -34,7 +37,7 @@ export default function Home() {
       <Hero />
 
       <section className="projects-home page-shell py-20 sm:py-28" id="projects">
-        <div className="mb-10 flex flex-col gap-5 sm:mb-14 sm:flex-row sm:items-end sm:justify-between">
+        <div className="projects-heading flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="eyebrow">Eigene Projekte</p>
             <h2 className="section-title max-w-3xl">
@@ -45,7 +48,7 @@ export default function Home() {
             Kollaborationen <span aria-hidden="true">↓</span>
           </Link>
         </div>
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="featured-project-grid grid gap-8 md:grid-cols-2">
           {featuredProjects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
@@ -53,6 +56,10 @@ export default function Home() {
       </section>
 
       <section className="charango-detail page-shell pb-20 sm:pb-28" id="charango">
+        <DetailMoodImage
+          imageAlt="Poster des Films The Secret of the Charango"
+          imageSrc="/images/charango-poster.webp"
+        />
         <div className="mb-10 grid gap-8 border-t border-ink/20 pt-12 lg:grid-cols-[0.45fr_1.55fr]">
           <div>
             <p className="eyebrow">Film im Fokus</p>
@@ -118,6 +125,7 @@ export default function Home() {
       </section>
 
       <section className="film-detail page-shell pb-20 sm:pb-28" id="mothers-dress">
+        <DetailMoodImage />
         <div className="mb-10 grid gap-8 border-t border-ink/20 pt-12 lg:grid-cols-[0.45fr_1.55fr]">
           <div>
             <p className="eyebrow">Work in Progress</p>
@@ -181,6 +189,8 @@ export default function Home() {
             category="Musiktheater"
             description="Ein Kindermusiktheater der Künstlergruppe Die Glorreichen Fünf."
             href="http://www.henrike-baumgart.de/?q=content/von-uempfen-struempfen-und-keinhoernern"
+            imageAlt="Musikerin mit Akkordeon bei einer Aufführung"
+            imageSrc="/images/music-theatre-performance.webp"
             label="Stück entdecken"
             title="Von Ümpfen, Strümpfen und (K)Einhörnern"
             year="Die Glorreichen Fünf"
@@ -190,6 +200,8 @@ export default function Home() {
             category="Szenisch-musikalische Lesung"
             description="Eine szenisch-musikalische Lesung zum Kinderbuch von Tabea Michel."
             href="https://verlag-andreaschroeder.com/shop/ols/products/beim-friseur"
+            imageAlt="Musikalische Performance auf einer dunklen Bühne"
+            imageSrc="/images/stage-performance.webp"
             label="Buch entdecken"
             title="Beim Frisör"
             year="Nach dem Kinderbuch von Tabea Michel"
@@ -198,7 +210,7 @@ export default function Home() {
       </section>
 
       <section className="live-section page-shell py-20 sm:py-28" id="live">
-        <div className="grid gap-10 border-y border-ink/20 py-12 lg:grid-cols-[0.45fr_1.55fr]">
+        <div className="live-panel grid gap-10 border-y border-ink/20 py-12 lg:grid-cols-[0.45fr_1.55fr]">
           <div>
             <p className="eyebrow">Live-Termine</p>
             <p className="mt-4 text-sm text-ink/45">Screenings · Musik · Theater</p>
@@ -208,8 +220,8 @@ export default function Home() {
               Neue Termine sind in Planung.
             </h2>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-ink/60">
-              Informationen zu kommenden Vorführungen, Konzerten und
-              Musiktheater-Terminen werden hier veröffentlicht.
+              Aktuell gibt es keine öffentlichen Termine. Neue Screenings,
+              Konzerte und Aufführungen werden hier veröffentlicht.
             </p>
           </div>
         </div>
