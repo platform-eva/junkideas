@@ -53,16 +53,26 @@ export default function Navbar() {
           <span />
         </button>
         <div className={`nav-items ${menuOpen ? "nav-items-open" : ""}`}>
-          {links.map((link) => (
-            <Link
-              className={`nav-link ${activeSection === link.href.slice(2) ? "nav-link-active" : ""}`}
-              href={link.href}
-              key={link.href}
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
+          <div className="nav-panel-links">
+            {links.map((link, index) => (
+              <Link
+                className={`nav-link ${activeSection === link.href.slice(2) ? "nav-link-active" : ""}`}
+                href={link.href}
+                key={link.href}
+                onClick={() => setMenuOpen(false)}
+              >
+                <span className="nav-number">{String(index + 1).padStart(2, "0")}</span>
+                <span>{link.label}</span>
+              </Link>
+            ))}
+          </div>
+          <div className="nav-panel-meta">
+            <div className="nav-socials" aria-label="Social Media">
+              <a href="https://www.instagram.com/pianoman.lapelicula/" rel="noreferrer" target="_blank">Instagram</a>
+              <a href="#contact">E-Mail</a>
+            </div>
+            <p>DE / EN</p>
+          </div>
         </div>
       </nav>
     </header>

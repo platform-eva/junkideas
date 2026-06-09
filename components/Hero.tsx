@@ -16,9 +16,13 @@ export default function Hero() {
       <div className="hero-content">
         <div className="hero-copy">
           <p className="eyebrow">Bärbel Junk · Music & Film Artist</p>
-          <h1 className="hero-story">
-            Aus Schnapsideen
-            <span>werden Geschichten.</span>
+          <h1
+            aria-label="Aus Schnapsideen werden Geschichten."
+            className="hero-story"
+          >
+            <span className="hero-line">Aus Schnapsideen</span>
+            <span className="hero-line">werden</span>
+            <span className="hero-line hero-accent">Geschichten.</span>
           </h1>
           <div className="hero-rule" />
           <p className="hero-intro">
@@ -32,8 +36,9 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <p className="hero-quote">„Die besten Ideen landen zuerst im Papierkorb.“</p>
-      <div className="scroll-cue" aria-hidden="true">⌄</div>
+      <Link className="scroll-cue" href="#projects">
+        Scrollen <span aria-hidden="true">↓</span>
+      </Link>
     </section>
   );
 }
