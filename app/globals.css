@@ -452,6 +452,14 @@ button:focus-visible {
   color: var(--gold);
 }
 
+.hero-story .hero-line {
+  color: inherit;
+}
+
+.hero-story .hero-accent {
+  color: var(--gold);
+}
+
 .hero-rule {
   width: 3.4rem;
   height: 1px;
@@ -886,6 +894,11 @@ button:focus-visible {
     padding-block: 0.7rem;
   }
 
+  .main-nav .logo {
+    transform: scale(1.15);
+    transform-origin: left center;
+  }
+
   .logo-word {
     font-size: 1.55rem;
   }
@@ -1127,7 +1140,10 @@ button:focus-visible {
     align-items: stretch;
     justify-content: center;
     gap: 4rem;
-    background: rgba(4, 4, 3, 0.98);
+    background-color: #080807;
+    background-image: url("/images/film-grain-texture.png");
+    background-blend-mode: soft-light;
+    background-size: cover;
     padding: clamp(2rem, 4vw, 4rem);
   }
 
@@ -1192,13 +1208,13 @@ button:focus-visible {
 
   .hero-image {
     object-position: 44% center;
-    filter: sepia(0.32) saturate(0.68) brightness(0.54) contrast(1.2);
+    filter: sepia(0.26) saturate(0.72) brightness(0.66) contrast(1.26);
     transform: none;
   }
 
   .hero-shade {
-    background: rgba(0, 0, 0, 0.37);
-    box-shadow: inset 18rem 0 16rem rgba(0, 0, 0, 0.58);
+    background: rgba(0, 0, 0, 0.28);
+    box-shadow: inset 17rem 0 15rem rgba(0, 0, 0, 0.5);
   }
 
   .hero-content {
