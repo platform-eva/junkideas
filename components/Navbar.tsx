@@ -15,6 +15,19 @@ const links = [
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const updateScrollState = () => setScrolled(window.scrollY > 48);
+    updateScrollState();
+    window.addEventListener("scroll", updateScrollState, { passive: true });
+    return () => window.removeEventListener("scroll", updateScrollState);
+  }, []);
+
+  useEffect(() => {
+    document.body.classList.toggle("menu-open", menuOpen);
+    return () => document.body.classList.remove("menu-open");
+  }, [menuOpen]);
 
   useEffect(() => {
     const sections = ["projects", "collaborations", "live", "about", "contact"]
@@ -39,42 +52,71 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="site-nav">
-      <nav className="main-nav" aria-label="Main navigation">
-        <Logo />
-        <button
-          aria-expanded={menuOpen}
-          aria-label={menuOpen ? "Menü schließen" : "Menü öffnen"}
-          className={`menu-toggle ${menuOpen ? "menu-toggle-open" : ""}`}
-          onClick={() => setMenuOpen((open) => !open)}
-          type="button"
-        >
-          <span />
-          <span />
-        </button>
-        <div className={`nav-items ${menuOpen ? "nav-items-open" : ""}`}>
-          <div className="nav-panel-links">
-            {links.map((link, index) => (
+    <>
+      <header className={`top-nav ${scrolled || menuOpen ? "top-nav-scrolled" : ""}`}>
+        <nav className="top-nav-inner" aria-label="Feste Hauptnavigation">
+          <Logo />
+          <div className="top-nav-links">
+            {links.map((link) => (
               <Link
-                className={`nav-link ${activeSection === link.href.slice(2) ? "nav-link-active" : ""}`}
+                className={`top-nav-link ${activeSection === link.href.slice(2) ? "top-nav-link-active" : ""}`}
                 href={link.href}
                 key={link.href}
-                onClick={() => setMenuOpen(false)}
               >
-                <span className="nav-number">{String(index + 1).padStart(2, "0")}</span>
-                <span>{link.label}</span>
+                {link.label}
               </Link>
             ))}
           </div>
-          <div className="nav-panel-meta">
-            <div className="nav-socials" aria-label="Social Media">
-              <a href="https://www.instagram.com/pianoman.lapelicula/" rel="noreferrer" target="_blank">Instagram</a>
-              <a href="#contact">E-Mail</a>
-            </div>
-            <p>DE / EN</p>
-          </div>
+          <button
+            aria-expanded={menuOpen}
+            aria-label={menuOpen ? "Menü schließen" : "Menü öffnen"}
+            className={`menu-toggle ${menuOpen ? "menu-toggle-open" : ""}`}
+            onClick={() => setMenuOpen((open) => !open)}
+            type="button"
+          >
+            <span />
+            <span />
+          </button>
+        </nav>
+      </header>
+
+      <div className={`mobile-menu ${menuOpen ? "mobile-menu-open" : ""}`}>
+        <div className="mobile-menu-links">
+          {links.map((link, index) => (
+            <Link
+              className={activeSection === link.href.slice(2) ? "mobile-menu-link-active" : ""}
+              href={link.href}
+              key={link.href}
+              onClick={() => setMenuOpen(false)}
+            >
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              {link.label}
+            </Link>
+          ))}
         </div>
-      </nav>
-    </header>
+      </div>
+
+      <aside className="hero-nav-panel" aria-label="Hero navigation">
+        <div className="hero-nav-links">
+          {links.map((link, index) => (
+            <Link
+              className={`hero-nav-link ${activeSection === link.href.slice(2) ? "hero-nav-link-active" : ""}`}
+              href={link.href}
+              key={link.href}
+            >
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              {link.label}
+            </Link>
+          ))}
+        </div>
+        <div className="hero-nav-meta">
+          <div aria-label="Social Media">
+            <a href="https://www.instagram.com/pianoman.lapelicula/" rel="noreferrer" target="_blank">Instagram</a>
+            <a href="#contact">E-Mail</a>
+          </div>
+          <p>DE / EN</p>
+        </div>
+      </aside>
+    </>
   );
 }
