@@ -32,8 +32,9 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <p className="hero-quote">„Die besten Ideen landen zuerst im Papierkorb.“</p>
-      <div className="scroll-cue" aria-hidden="true">⌄</div>
+      <Link className="scroll-cue" href="#projects">
+        Scrollen <span aria-hidden="true">↓</span>
+      </Link>
     </section>
   );
 }
