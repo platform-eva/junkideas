@@ -48,6 +48,7 @@ export default function Home() {
             Kollaborationen <span aria-hidden="true">↓</span>
           </Link>
         </div>
+        <p className="projects-index" aria-hidden="true">Selected works · 01—02</p>
         <div className="featured-project-grid grid gap-8 md:grid-cols-2">
           {featuredProjects.map((project) => (
             <ProjectCard key={project.title} {...project} />
@@ -165,15 +166,17 @@ export default function Home() {
       </section>
 
       <section className="all-projects-section page-shell pb-20 sm:pb-28" id="collaborations">
-        <div className="mb-8 flex items-center gap-5">
-          <h2 className="font-display text-4xl tracking-[-0.04em]">Kollaborationen</h2>
-          <div className="h-px flex-1 bg-ink/20" />
+        <div className="collaborations-heading">
+          <div>
+            <p className="eyebrow">Gemeinsam entwickeln</p>
+            <h2 className="font-display text-4xl tracking-[-0.04em]">Kollaborationen</h2>
+          </div>
+          <p>
+            Film, Musik und Bühne entstehen im Austausch. Jede Zusammenarbeit
+            öffnet einen anderen Blick auf die Idee.
+          </p>
         </div>
-        <p className="mb-10 max-w-2xl text-lg leading-relaxed text-ink/60">
-          Projekte, die gemeinsam mit Künstlerinnen, Künstlern und Ensembles
-          entstehen.
-        </p>
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="collaborations-grid grid gap-6 lg:grid-cols-3">
           <ProjectCard
             accent="blue"
             category="Film"
@@ -225,6 +228,29 @@ export default function Home() {
             </p>
           </div>
         </div>
+        <div className="live-archive">
+          <div className="live-archive-heading">
+            <p className="eyebrow">Ausgewählte Rückblicke</p>
+            <p>Screenings · Konzerte · Aufführungen</p>
+          </div>
+          <div className="live-archive-list">
+            <article>
+              <span>Screening</span>
+              <h3>The Secret of the Charango</h3>
+              <p>Experimenteller Kurzfilm · Bolivien & Deutschland</p>
+            </article>
+            <article>
+              <span>Musiktheater</span>
+              <h3>Von Ümpfen, Strümpfen und (K)Einhörnern</h3>
+              <p>Die Glorreichen Fünf</p>
+            </article>
+            <article>
+              <span>Lesung & Musik</span>
+              <h3>Beim Frisör</h3>
+              <p>Szenisch-musikalische Lesung</p>
+            </article>
+          </div>
+        </div>
       </section>
 
       <section className="about-home page-shell py-20 sm:py-28" id="about">
@@ -269,17 +295,31 @@ export default function Home() {
             </p>
           </div>
         </div>
+        <div className="about-drive">
+          <p className="eyebrow">Was mich antreibt</p>
+          <div>
+            <p>
+              Mich interessieren die leisen Momente, in denen Menschen,
+              Erinnerungen und Orte plötzlich miteinander sprechen.
+            </p>
+            <p>
+              Film und Musik sind für mich Wege, diesen Begegnungen eine Form
+              zu geben und sie mit anderen zu teilen.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section className="feature-statement border-y border-ink/15">
-        <div className="page-shell grid gap-12 py-20 sm:py-28 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
-          <p className="max-w-4xl font-display text-5xl font-semibold uppercase leading-[0.95] tracking-[-0.06em] sm:text-7xl">
-            Junkideas is where curiosity becomes cinema, music and theatre.
-          </p>
-          <div className="max-w-md">
-            <p className="mb-8 text-lg leading-relaxed text-ink/60">
-              Created by Bärbel Junk in collaboration with artists across
-              disciplines, languages and borders.
+      <section className="feature-statement signature-statement border-y border-ink/15">
+        <div className="page-shell py-20 sm:py-28">
+          <p className="signature-kicker">Eine persönliche Handschrift</p>
+          <blockquote>
+            Erinnerung beginnt dort, wo Musik, Bilder und Begegnungen
+            einander eine Geschichte erzählen.
+          </blockquote>
+          <div className="signature-meta">
+            <p>
+              Junkideas is where curiosity becomes cinema, music and theatre.
             </p>
             <Link className="button-dark" href="#contact">
               Kontakt aufnehmen
@@ -289,6 +329,7 @@ export default function Home() {
       </section>
 
       <section className="contact-home page-shell py-20 sm:py-28" id="contact">
+        <p className="contact-endmark" aria-hidden="true">Letzte Szene · Neue Idee</p>
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
           <div>
             <p className="eyebrow">Kontakt</p>
@@ -299,8 +340,8 @@ export default function Home() {
           </div>
           <div className="border-l border-ink/20 pl-6 sm:pl-10">
             <p className="text-xl leading-relaxed">
-              Interesse an einer Zusammenarbeit, Vorführung oder einem Gespräch
-              über ein Projekt?
+              Vielleicht beginnt das nächste Projekt mit einem Gespräch, einer
+              Melodie oder einer ungewöhnlichen Frage.
             </p>
             <a
               className="button-dark mt-10 inline-flex"

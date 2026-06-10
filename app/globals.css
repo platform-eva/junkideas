@@ -1872,3 +1872,493 @@ body::before {
     font-size: clamp(6rem, 30vw, 7.5rem);
   }
 }
+
+/* =========================
+   Section art direction
+========================= */
+
+.projects-home {
+  isolation: isolate;
+}
+
+.projects-home::after {
+  position: absolute;
+  z-index: -1;
+  top: 12rem;
+  right: -0.04em;
+  color: rgba(242, 237, 226, 0.025);
+  content: "FILM";
+  font-size: clamp(10rem, 25vw, 24rem);
+  font-weight: 850;
+  letter-spacing: -0.1em;
+  line-height: 0.8;
+  pointer-events: none;
+}
+
+.projects-index {
+  margin: -3.5rem 0 2rem auto;
+  width: fit-content;
+  color: rgba(242, 237, 226, 0.38);
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.projects-home .featured-project-grid {
+  gap: clamp(2rem, 4vw, 4.5rem);
+}
+
+.projects-home .project-visual {
+  min-height: clamp(32rem, 55vw, 52rem);
+}
+
+.projects-home .project-card-body > p {
+  max-width: 34rem;
+  color: rgba(242, 237, 226, 0.54);
+  font-size: 0.92rem;
+}
+
+.project-card:hover .project-poster-copy {
+  transform: translateY(-0.35rem);
+}
+
+.project-poster-copy {
+  transition: transform 500ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.project-card .text-link span {
+  transition: transform 300ms ease;
+}
+
+.project-card:hover .text-link span {
+  transform: translate(0.2rem, -0.2rem);
+}
+
+.collaborations-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(16rem, 0.6fr);
+  align-items: end;
+  gap: 3rem;
+  margin-bottom: clamp(3rem, 7vw, 6rem);
+  border-bottom: 1px solid rgba(242, 237, 226, 0.09);
+  padding-bottom: 2rem;
+}
+
+.collaborations-heading h2 {
+  margin-top: 0.8rem;
+  font-size: clamp(3.2rem, 7vw, 7rem);
+  line-height: 0.9;
+}
+
+.collaborations-heading > p {
+  color: rgba(242, 237, 226, 0.56);
+  font-size: 0.88rem;
+  line-height: 1.75;
+}
+
+.collaborations-grid {
+  align-items: start;
+}
+
+.collaborations-grid .project-card:nth-child(2) {
+  margin-top: clamp(3rem, 8vw, 8rem);
+}
+
+.collaborations-grid .project-card:nth-child(3) {
+  margin-top: clamp(1.5rem, 4vw, 4rem);
+}
+
+.collaborations-grid .project-visual {
+  min-height: clamp(25rem, 36vw, 36rem);
+}
+
+.collaborations-grid .project-card-body > p {
+  color: rgba(242, 237, 226, 0.5);
+  font-size: 0.88rem;
+}
+
+.live-section {
+  position: relative;
+}
+
+.live-section::before {
+  position: absolute;
+  top: 12rem;
+  bottom: 10rem;
+  left: 28%;
+  width: 1px;
+  background: linear-gradient(transparent, rgba(185, 154, 91, 0.2), transparent);
+  content: "";
+  pointer-events: none;
+}
+
+.live-panel {
+  background:
+    linear-gradient(90deg, rgba(242, 237, 226, 0.025), transparent 50%);
+}
+
+.live-archive {
+  margin-top: clamp(4rem, 8vw, 8rem);
+}
+
+.live-archive-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.live-archive-heading > p:last-child {
+  color: rgba(242, 237, 226, 0.38);
+  font-size: 0.55rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.live-archive-list article {
+  display: grid;
+  grid-template-columns: 0.45fr 1.2fr 0.8fr;
+  align-items: baseline;
+  gap: 2rem;
+  border-top: 1px solid rgba(242, 237, 226, 0.09);
+  padding-block: 1.5rem;
+  transition:
+    border-color 250ms ease,
+    padding-left 300ms ease;
+}
+
+.live-archive-list article:last-child {
+  border-bottom: 1px solid rgba(242, 237, 226, 0.09);
+}
+
+.live-archive-list article:hover {
+  border-color: rgba(185, 154, 91, 0.42);
+  padding-left: 0.5rem;
+}
+
+.live-archive-list span {
+  color: var(--gold);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.live-archive-list h3 {
+  font-size: clamp(1.4rem, 2.8vw, 2.7rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.live-archive-list p {
+  color: rgba(242, 237, 226, 0.44);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.about-home {
+  position: relative;
+}
+
+.about-home::before {
+  position: absolute;
+  top: 16rem;
+  right: 0;
+  bottom: 10rem;
+  width: 1px;
+  background: rgba(242, 237, 226, 0.07);
+  content: "";
+}
+
+.about-drive {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(3rem, 8vw, 9rem);
+  margin-top: clamp(6rem, 11vw, 11rem);
+  border-top: 1px solid rgba(185, 154, 91, 0.3);
+  padding-top: 2rem;
+}
+
+.about-drive > div {
+  display: grid;
+  gap: 1.4rem;
+  max-width: 46rem;
+  color: rgba(242, 237, 226, 0.76);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.5rem, 3vw, 2.8rem);
+  line-height: 1.25;
+}
+
+.signature-statement {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(185, 154, 91, 0.09), transparent 30%),
+    var(--black-soft);
+}
+
+.signature-statement::before {
+  position: absolute;
+  right: -0.05em;
+  bottom: -0.28em;
+  color: rgba(242, 237, 226, 0.018);
+  content: "J";
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(24rem, 55vw, 55rem);
+  line-height: 1;
+}
+
+.signature-statement .page-shell {
+  position: relative;
+  z-index: 1;
+}
+
+.signature-kicker {
+  margin-bottom: clamp(3rem, 7vw, 7rem);
+  color: var(--gold);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.signature-statement blockquote {
+  max-width: 16ch;
+  color: var(--sand);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 7vw, 7rem);
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.signature-meta {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-top: clamp(4rem, 8vw, 8rem);
+  border-top: 1px solid rgba(242, 237, 226, 0.1);
+  padding-top: 1.5rem;
+}
+
+.signature-meta p {
+  max-width: 30rem;
+  color: rgba(242, 237, 226, 0.48);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.contact-home {
+  position: relative;
+  min-height: 90svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-home::before {
+  position: absolute;
+  z-index: -1;
+  right: 4%;
+  bottom: 10%;
+  width: min(30vw, 28rem);
+  aspect-ratio: 1;
+  border: 1px solid rgba(185, 154, 91, 0.12);
+  content: "";
+  transform: rotate(45deg);
+}
+
+.contact-endmark {
+  margin: 0 0 clamp(5rem, 10vw, 10rem) auto;
+  color: rgba(242, 237, 226, 0.32);
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.contact-home .button-dark {
+  min-width: 13rem;
+  border-color: var(--gold);
+  background: transparent;
+  color: var(--gold);
+}
+
+.contact-home .button-dark:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+@media (max-width: 899px) {
+  .projects-home::after,
+  .about-home::before,
+  .live-section::before {
+    display: none;
+  }
+
+  .projects-index {
+    margin: -1rem 0 1.5rem;
+  }
+
+  .projects-home .project-visual {
+    min-height: 34rem;
+  }
+
+  .collaborations-heading,
+  .about-drive {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .collaborations-grid .project-card:nth-child(2),
+  .collaborations-grid .project-card:nth-child(3) {
+    margin-top: 1.5rem;
+  }
+
+  .live-archive-heading,
+  .signature-meta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .live-archive-list article {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+    padding-block: 1.4rem;
+  }
+
+  .about-drive {
+    margin-top: 6rem;
+  }
+
+  .about-drive > div {
+    font-size: clamp(1.5rem, 7vw, 2.2rem);
+  }
+
+  .signature-statement blockquote {
+    font-size: clamp(2.8rem, 12vw, 4.5rem);
+  }
+
+  .contact-home {
+    min-height: auto;
+  }
+
+  .contact-endmark {
+    margin-bottom: 4rem;
+  }
+}
+
+/* =========================
+   Final rhythm refinement
+========================= */
+
+.projects-heading {
+  margin-bottom: clamp(5rem, 9vw, 9rem);
+}
+
+.projects-home::after {
+  top: 15rem;
+  right: 0;
+  color: rgba(242, 237, 226, 0.012);
+  font-size: clamp(9rem, 20vw, 19rem);
+}
+
+.projects-index {
+  margin: -5rem 0 2.5rem auto;
+  color: rgba(242, 237, 226, 0.25);
+}
+
+.projects-home .featured-project-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.projects-home .project-card {
+  border-top-color: rgba(242, 237, 226, 0.18);
+}
+
+.projects-home .project-card-body {
+  padding-top: 1.75rem;
+}
+
+.projects-home .project-card-body > p {
+  margin-top: 0.8rem;
+}
+
+.projects-home .project-card-body .text-link {
+  margin-top: 1.8rem;
+}
+
+.projects-home,
+.all-projects-section,
+.live-section,
+.about-home,
+.contact-home {
+  scroll-margin-top: 5rem;
+}
+
+.collaborations-heading,
+.live-panel,
+.about-home > div:first-child,
+.signature-meta {
+  border-color: rgba(242, 237, 226, 0.08);
+}
+
+.collaborations-heading,
+.live-archive,
+.about-drive,
+.signature-meta {
+  margin-top: clamp(4rem, 8vw, 8rem);
+}
+
+.collaborations-heading {
+  margin-top: 0;
+}
+
+.eyebrow,
+.signature-kicker,
+.contact-endmark,
+.projects-index {
+  letter-spacing: 0.22em;
+}
+
+.collaborations-heading > p,
+.live-archive-list p,
+.signature-meta p,
+.projects-home .project-card-body > p,
+.collaborations-grid .project-card-body > p {
+  max-width: 38rem;
+  line-height: 1.75;
+}
+
+.live-section::before,
+.about-home::before,
+.contact-home::before {
+  opacity: 0.62;
+}
+
+@media (max-width: 899px) {
+  .projects-heading {
+    margin-bottom: 4rem;
+  }
+
+  .projects-index {
+    margin: -2.5rem 0 2rem;
+  }
+
+  .collaborations-heading,
+  .live-archive,
+  .about-drive,
+  .signature-meta {
+    margin-top: 4.5rem;
+  }
+
+  .collaborations-heading {
+    margin-top: 0;
+  }
+}
