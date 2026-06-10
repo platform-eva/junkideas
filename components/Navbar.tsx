@@ -53,7 +53,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={`top-nav ${scrolled || menuOpen ? "top-nav-scrolled" : ""}`}>
+      <header className={`top-nav ${scrolled || menuOpen ? "top-nav-scrolled" : ""} ${scrolled ? "top-nav-links-visible" : ""}`}>
         <nav className="top-nav-inner" aria-label="Feste Hauptnavigation">
           <Logo />
           <div className="top-nav-links">
