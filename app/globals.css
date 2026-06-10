@@ -2362,3 +2362,126 @@ body::before {
     margin-top: 0;
   }
 }
+
+/* =========================
+   Final mobile polish
+========================= */
+
+.credits-disclosure-toggle {
+  display: none;
+}
+
+@media (max-width: 899px) {
+  .live-section,
+  .about-home,
+  .contact-home {
+    padding-block: 5.5rem;
+  }
+
+  .charango-detail,
+  .film-detail {
+    padding-bottom: 5.25rem;
+  }
+
+  .charango-detail .detail-mood-image,
+  .film-detail .detail-mood-image {
+    min-height: 26rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .charango-info,
+  .film-detail > div:last-child {
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .video-consent {
+    padding: 1.25rem;
+  }
+
+  .video-consent h3 {
+    margin-block: 0.75rem;
+    font-size: clamp(1.65rem, 8vw, 2.6rem);
+  }
+
+  .video-consent p:not(.eyebrow) {
+    margin-bottom: 1.25rem;
+    font-size: 0.88rem;
+  }
+
+  .credits-disclosure .eyebrow {
+    margin-bottom: 1rem;
+  }
+
+  .credits-disclosure-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-block: 1px solid rgba(242, 237, 226, 0.1);
+    padding-block: 1rem;
+    color: var(--gold);
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .credits-disclosure-content {
+    display: none;
+  }
+
+  .credits-disclosure-open .credits-disclosure-content {
+    display: block;
+  }
+
+  .credits-disclosure-open .credits-disclosure-toggle {
+    border-bottom-color: transparent;
+  }
+
+  .credits-list > div {
+    gap: 0.5rem;
+    padding-block: 1rem;
+  }
+
+  .credits-list dd {
+    font-size: 0.96rem;
+    line-height: 1.55;
+  }
+
+  .detail-panel {
+    padding-top: 1.5rem;
+  }
+
+  .about-drive,
+  .live-archive,
+  .signature-meta {
+    margin-top: 3.75rem;
+  }
+
+  .contact-endmark {
+    margin-bottom: 3rem;
+  }
+
+  .top-nav .menu-toggle {
+    width: 2.65rem;
+    height: 2.65rem;
+    gap: 0.4rem;
+    border-color: rgba(242, 237, 226, 0.14);
+  }
+
+  .top-nav .menu-toggle span {
+    width: 0.95rem;
+    height: 0.5px;
+    background: rgba(242, 237, 226, 0.82);
+  }
+
+  .top-nav .menu-toggle-open span:first-child {
+    transform: translateY(0.2rem) rotate(45deg);
+  }
+
+  .top-nav .menu-toggle-open span:last-child {
+    transform: translateY(-0.2rem) rotate(-45deg);
+  }
+}

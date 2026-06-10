@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import CreditsDisclosure from "@/components/CreditsDisclosure";
 import DetailMoodImage from "@/components/DetailMoodImage";
 import Hero from "@/components/Hero";
 import ProjectCard from "@/components/ProjectCard";
@@ -78,8 +79,7 @@ export default function Home() {
         <VimeoEmbed title="The Secret of the Charango" videoId="835266930" />
 
         <div className="charango-info mt-12 grid gap-12 lg:grid-cols-[1fr_1fr]">
-          <div>
-            <p className="eyebrow mb-6">Credits</p>
+          <CreditsDisclosure>
             <dl className="credits-list">
               <div><dt>Idea, Direction & Production</dt><dd>Bärbel Junk</dd></div>
               <div><dt>Cinematography</dt><dd>Felipe Quiroga Álvarez Daza</dd></div>
@@ -97,7 +97,7 @@ export default function Home() {
               <div><dt>Poster Design</dt><dd>Maria Callejas Guimaraes</dd></div>
               <div><dt>Special Appearance</dt><dd>Heidrun Haußdörfer</dd></div>
             </dl>
-          </div>
+          </CreditsDisclosure>
           <div>
             <div className="detail-panel">
               <p className="eyebrow">Auszeichnungen</p>
@@ -148,13 +148,12 @@ export default function Home() {
           videoId="1122993615"
         />
         <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_1fr]">
-          <div>
-            <p className="eyebrow mb-6">Credits</p>
+          <CreditsDisclosure>
             <dl className="credits-list">
               <div><dt>Idea, Direction & Music</dt><dd>Bärbel Junk</dd></div>
               <div><dt>Cinematography</dt><dd>Felipe Quiroga Alvarez Daza</dd></div>
             </dl>
-          </div>
+          </CreditsDisclosure>
           <div className="detail-panel">
             <p className="eyebrow">Status</p>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink/60">
