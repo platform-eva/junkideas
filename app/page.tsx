@@ -256,13 +256,9 @@ export default function Home() {
         <div className="grid gap-8 border-b border-ink/20 pb-12 lg:grid-cols-[0.45fr_1.55fr]">
           <p className="eyebrow">Über mich</p>
           <div>
-  <h2 className="about-heading">
-    Bärbel Junk
-  </h2>
-  <p className="about-subheading">
-    Musik. Film. Begegnungen.
-  </p>
-</div>
+            <h2 className="about-heading">Musik. Film. Begegnungen.</h2>
+            <p className="about-subheading">Bärbel Junk</p>
+          </div>
         </div>
         <div className="about-portrait mt-12">
           <Image

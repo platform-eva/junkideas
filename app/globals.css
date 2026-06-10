@@ -1398,20 +1398,24 @@ button:focus-visible {
   }
 }
 .about-heading {
-  max-width: 10ch;
-  font-size: clamp(4rem, 9vw, 8rem);
-  font-weight: 850;
-  line-height: 0.86;
-  letter-spacing: -0.07em;
-  text-transform: uppercase;
+  max-width: 12ch;
+  color: var(--sand);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.6rem, 8vw, 7rem);
+  font-weight: 400;
+  line-height: 0.96;
+  letter-spacing: -0.055em;
 }
 
 .about-subheading {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   color: var(--gold);
-  font-size: clamp(1.4rem, 2.8vw, 2.8rem);
-  font-family: Georgia, "Times New Roman", serif;
-  line-height: 1.15;
+  font-size: 0.62rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  line-height: 1.4;
+  text-transform: uppercase;
 }
 @media (max-width: 639px) {
   .hero-story {
