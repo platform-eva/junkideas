@@ -213,83 +213,20 @@ button:focus-visible {
 
 .logo {
   display: inline-flex;
-  align-items: flex-end;
+  align-items: center;
   color: var(--sand);
   line-height: 1;
 }
 
-.logo-word {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.9rem;
-  letter-spacing: -0.08em;
+.logo-image {
+  width: clamp(8rem, 12vw, 11rem);
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
-.logo-bin {
-  position: relative;
-  width: 1.05rem;
-  height: 1.3rem;
-  margin: 0 0.18rem 0.04rem 0.22rem;
-  border: 1px solid var(--gold);
-  border-top-width: 2px;
-}
-
-.logo-bin::before {
-  position: absolute;
-  top: -0.25rem;
-  left: -0.17rem;
-  width: 1.35rem;
-  height: 2px;
-  background: var(--gold);
-  content: "";
-}
-
-.logo-bin::after {
-  position: absolute;
-  top: -0.55rem;
-  left: 0.4rem;
-  width: 0.16rem;
-  height: 0.16rem;
-  border-radius: 50%;
-  background: var(--gold);
-  box-shadow:
-    -0.4rem -0.25rem 0 -0.02rem var(--gold),
-    0.42rem -0.3rem 0 -0.03rem var(--gold);
-  content: "";
-}
-
-.film {
-  position: absolute;
-  bottom: 1.2rem;
-  width: 0.18rem;
-  height: 0.65rem;
-  border: 1px solid var(--gold);
-  border-top: 0;
-  transform: rotate(-18deg);
-}
-
-.film-one {
-  left: 0.18rem;
-}
-
-.film-two {
-  left: 0.48rem;
-  bottom: 1.35rem;
-  transform: rotate(9deg);
-}
-
-.film-three {
-  right: 0.1rem;
-  bottom: 1.15rem;
-  transform: rotate(24deg);
-}
-
-.logo-footer .logo-word {
-  font-size: 3rem;
-}
-
-.logo-footer .logo-bin {
-  margin-bottom: 0.18rem;
-  transform: scale(1.25);
+.logo-footer .logo-image {
+  width: clamp(12rem, 20vw, 16rem);
 }
 
 /* =========================
