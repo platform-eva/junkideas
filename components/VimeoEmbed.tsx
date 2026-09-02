@@ -22,8 +22,8 @@ export default function VimeoEmbed({
           <p className="eyebrow">Vimeo Teaser</p>
           <h3>{title} ansehen</h3>
           <p>
-            Der Teaser kann aufgrund seiner aktuellen Vimeo-Einstellungen
-            nicht direkt auf dieser Website eingebettet werden.
+            Der Teaser ist aktuell nicht öffentlich abrufbar. Sobald ein öffentlicher
+            Vimeo-Share-Link vorliegt, kann er hier direkt ersetzt werden.
           </p>
           <a
             className="button-light"
@@ -31,7 +31,7 @@ export default function VimeoEmbed({
             rel="noreferrer"
             target="_blank"
           >
-            Teaser auf Vimeo öffnen ↗
+            Teaser bei Vimeo öffnen ↗
           </a>
         </div>
       </div>

@@ -143,7 +143,7 @@ export default function Home() {
         </div>
         <VimeoEmbed
           embedEnabled={false}
-          externalUrl="https://vimeo.com/1122993615"
+          externalUrl="https://vimeo.com/manage/videos/1122993615"
           title="My mother's dress · Teaser"
           videoId="1122993615"
         />
@@ -180,7 +180,7 @@ export default function Home() {
             accent="blue"
             category="Film"
             description="Ein Spielfilm in Entwicklung. Koproduktion und Musik: Bärbel Junk."
-            href="https://www.instagram.com/pianoman.lapelicula/"
+            href="https://www.instagram.com/baerbeljunk/"
             label="Auf Instagram folgen"
             status="In Entwicklung"
             title="Pianoman by Felipe Quiroga"
@@ -340,7 +340,7 @@ export default function Home() {
             </p>
             <a
               className="button-dark mt-10 inline-flex"
-              href="https://www.instagram.com/pianoman.lapelicula/"
+              href="https://www.instagram.com/baerbeljunk/"
               rel="noreferrer"
               target="_blank"
             >

@@ -2,13 +2,19 @@ import Image from "next/image";
 
 type ProjectCardProps = {
   title: string;
+  titleEn?: string;
   category: string;
+  categoryEn?: string;
   year: string;
+  yearEn?: string;
   description: string;
+  descriptionEn?: string;
   href: string;
   accent: "sun" | "rose" | "blue" | "green";
   label: string;
+  labelEn?: string;
   status?: string;
+  statusEn?: string;
   imageSrc?: string;
   imageAlt?: string;
 };
@@ -20,15 +26,34 @@ const accentClasses = {
   green: "bg-mint",
 };
 
+function TextPair({ de, en }: { de: string; en?: string }) {
+  if (!en || en === de) {
+    return de;
+  }
+
+  return (
+    <>
+      <span className="lang-de">{de}</span>
+      <span className="lang-en">{en}</span>
+    </>
+  );
+}
+
 export default function ProjectCard({
   title,
+  titleEn,
   category,
+  categoryEn,
   year,
+  yearEn,
   description,
+  descriptionEn,
   href,
   accent,
   label,
+  labelEn,
   status,
+  statusEn,
   imageSrc,
   imageAlt,
 }: ProjectCardProps) {
@@ -50,22 +75,28 @@ export default function ProjectCard({
             {title.charAt(0)}
           </span>
         )}
-        {status && <span className="status-tag">{status}</span>}
+        {status && (
+          <span className="status-tag">
+            <TextPair de={status} en={statusEn} />
+          </span>
+        )}
         <div className="project-poster-copy">
-          <p>{category}</p>
-          <h3>{title}</h3>
-          <span>{year}</span>
+          <p><TextPair de={category} en={categoryEn} /></p>
+          <h3><TextPair de={title} en={titleEn} /></h3>
+          <span><TextPair de={year} en={yearEn} /></span>
         </div>
       </div>
       <div className="project-card-body flex flex-1 flex-col pt-6">
-        <p className="mt-5 flex-1 leading-relaxed text-ink/70">{description}</p>
+        <p className="mt-5 flex-1 leading-relaxed text-ink/70">
+          <TextPair de={description} en={descriptionEn} />
+        </p>
         <a
           className="text-link mt-7"
           href={href}
           rel={isInternal ? undefined : "noreferrer"}
           target={isInternal ? undefined : "_blank"}
         >
-          {label} <span aria-hidden="true">↗</span>
+          <TextPair de={label} en={labelEn} /> <span aria-hidden="true">↗</span>
         </a>
       </div>
     </article>

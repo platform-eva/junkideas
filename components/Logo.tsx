@@ -12,10 +12,10 @@ export default function Logo({ footer = false }: { footer?: boolean }) {
         alt=""
         aria-hidden="true"
         className="logo-image"
-        height={563}
+        height={557}
         priority
         src="/images/junkideas-logo-gold-transparent.png"
-        width={1268}
+        width={1262}
       />
     </Link>
   );

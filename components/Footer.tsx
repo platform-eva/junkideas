@@ -18,7 +18,7 @@ export default function Footer() {
           <Link href="/#about">Über mich</Link>
           <Link href="/impressum">Impressum</Link>
           <Link href="/datenschutz">Datenschutz</Link>
-          <a href="https://www.instagram.com/pianoman.lapelicula/" rel="noreferrer" target="_blank">
+          <a href="https://www.instagram.com/baerbeljunk/" rel="noreferrer" target="_blank">
             Instagram
           </a>
         </div>

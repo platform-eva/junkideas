@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import LanguageToggle from "@/components/LanguageToggle";
 import Logo from "@/components/Logo";
 
 const links = [
@@ -56,7 +57,8 @@ export default function Navbar() {
       <header className={`top-nav ${scrolled || menuOpen ? "top-nav-scrolled" : ""} ${scrolled ? "top-nav-links-visible" : ""}`}>
         <nav className="top-nav-inner" aria-label="Feste Hauptnavigation">
           <Logo />
-          <div className="top-nav-links">
+          <div className="top-nav-actions">
+            <div className="top-nav-links">
             {links.map((link) => (
               <Link
                 className={`top-nav-link ${activeSection === link.href.slice(2) ? "top-nav-link-active" : ""}`}
@@ -66,6 +68,8 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            </div>
+            <LanguageToggle />
           </div>
           <button
             aria-expanded={menuOpen}
@@ -82,6 +86,7 @@ export default function Navbar() {
 
       <div className={`mobile-menu ${menuOpen ? "mobile-menu-open" : ""}`}>
         <div className="mobile-menu-links">
+          <LanguageToggle />
           {links.map((link, index) => (
             <Link
               className={activeSection === link.href.slice(2) ? "mobile-menu-link-active" : ""}
@@ -111,10 +116,10 @@ export default function Navbar() {
         </div>
         <div className="hero-nav-meta">
           <div aria-label="Social Media">
-            <a href="https://www.instagram.com/pianoman.lapelicula/" rel="noreferrer" target="_blank">Instagram</a>
+            <a href="https://www.instagram.com/baerbeljunk/" rel="noreferrer" target="_blank">Instagram</a>
             <a href="#contact">E-Mail</a>
           </div>
-          <p>DE / EN</p>
+          <LanguageToggle />
         </div>
       </aside>
     </>

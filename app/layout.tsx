@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import TranslationLayer from "@/components/TranslationLayer";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Navbar />
         <div className="site-content">{children}</div>
         <Footer />
+        <TranslationLayer />
       </body>
     </html>
   );

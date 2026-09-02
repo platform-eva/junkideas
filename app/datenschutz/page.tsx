@@ -11,9 +11,11 @@ export default function DatenschutzPage() {
         <p>
           Bärbel Junk
           <br />
-          <strong>[VOLLSTÄNDIGE ANSCHRIFT EINTRAGEN]</strong>
+          Walter-Friedrich-Str. 55, 13125 Berlin
           <br />
-          E-Mail: <strong>[E-MAIL-ADRESSE EINTRAGEN]</strong>
+          Heidenburgstr. 44, 66879 Oberstaufenbach
+          <br />
+          E-Mail: <a href="mailto:baerbel.junk@gmx.de">baerbel.junk@gmx.de</a>
         </p>
       </section>
       <section>
@@ -80,8 +82,7 @@ export default function DatenschutzPage() {
         </p>
       </section>
       <aside className="legal-warning">
-        Diese Vorlage ersetzt keine individuelle Rechtsberatung. Anschrift,
-        E-Mail-Adresse und tatsächlicher Hosting-Anbieter müssen vor
+        Diese Vorlage ersetzt keine individuelle Rechtsberatung. Der tatsächliche Hosting-Anbieter und neue externe Dienste müssen vor
         Veröffentlichung geprüft und ergänzt werden.
       </aside>
     </LegalPage>

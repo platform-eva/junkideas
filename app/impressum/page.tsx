@@ -11,16 +11,20 @@ export default function ImpressumPage() {
         <p>
           Bärbel Junk
           <br />
-          <strong>[VOLLSTÄNDIGE STRASSE UND HAUSNUMMER EINTRAGEN]</strong>
+          Walter-Friedrich-Str. 55
           <br />
-          <strong>[PLZ UND ORT EINTRAGEN]</strong>
+          13125 Berlin
+          <br />
+          Heidenburgstr. 44
+          <br />
+          66879 Oberstaufenbach
           <br />
           Deutschland
         </p>
       </section>
       <section>
         <h2>Kontakt</h2>
-        <p>E-Mail: <strong>[E-MAIL-ADRESSE EINTRAGEN]</strong></p>
+        <p>E-Mail: <a href="mailto:baerbel.junk@gmx.de">baerbel.junk@gmx.de</a></p>
       </section>
       <section>
         <h2>Redaktionell verantwortlich</h2>
@@ -36,11 +40,6 @@ export default function ImpressumPage() {
           Rechteinhaberin oder des jeweiligen Rechteinhabers.
         </p>
       </section>
-      <aside className="legal-warning">
-        Vor Veröffentlichung müssen die markierten Platzhalter durch eine
-        ladungsfähige Anschrift und eine erreichbare E-Mail-Adresse ersetzt
-        werden.
-      </aside>
     </LegalPage>
   );
 }
