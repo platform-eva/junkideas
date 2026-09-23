@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function VimeoEmbed({
+export default function VideoEmbed({
   embedEnabled = true,
   externalUrl,
   videoId,
@@ -19,19 +19,19 @@ export default function VimeoEmbed({
     return (
       <div className="video-consent">
         <div>
-          <p className="eyebrow">Vimeo Teaser</p>
+          <p className="eyebrow">YouTube Teaser</p>
           <h3>{title} ansehen</h3>
           <p>
-            Der Teaser ist aktuell nicht öffentlich abrufbar. Sobald ein öffentlicher
-            Vimeo-Share-Link vorliegt, kann er hier direkt ersetzt werden.
+            Der Teaser ist auf YouTube abrufbar. Beim Öffnen werden Daten an
+            YouTube übertragen.
           </p>
           <a
             className="button-light"
-            href={externalUrl ?? `https://vimeo.com/${videoId}`}
+            href={externalUrl ?? `https://youtu.be/${videoId}`}
             rel="noreferrer"
             target="_blank"
           >
-            Teaser bei Vimeo öffnen ↗
+            Teaser bei YouTube öffnen ↗
           </a>
         </div>
       </div>
@@ -44,7 +44,7 @@ export default function VimeoEmbed({
         <iframe
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
-          src={`https://player.vimeo.com/video/${videoId}?dnt=1`}
+          src={`https://www.youtube-nocookie.com/embed/${videoId}`}
           title={title}
         />
       </div>
@@ -54,14 +54,14 @@ export default function VimeoEmbed({
   return (
     <div className="video-consent">
       <div>
-        <p className="eyebrow">Vimeo Video</p>
+        <p className="eyebrow">YouTube Video</p>
         <h3>{title} ansehen</h3>
         <p>
-          Beim Laden des Videos werden Daten an Vimeo übertragen. Weitere
+          Beim Laden des Videos werden Daten an YouTube übertragen. Weitere
           Informationen stehen in der Datenschutzerklärung.
         </p>
         <button className="button-light" onClick={() => setAccepted(true)} type="button">
-          Vimeo-Video laden
+          YouTube-Video laden
         </button>
       </div>
     </div>

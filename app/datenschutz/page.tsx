@@ -46,22 +46,23 @@ export default function DatenschutzPage() {
       <section>
         <h2>4. Externe Links</h2>
         <p>
-          Die Website verlinkt auf externe Angebote, insbesondere Vimeo,
+          Die Website verlinkt auf externe Angebote, insbesondere YouTube,
           Instagram und Projektseiten Dritter. Beim Anklicken gelten die
           Datenschutzbestimmungen des jeweiligen Anbieters. Inhalte dieser
-          Dienste werden derzeit nicht auf dieser Website eingebettet.
+          Dienste werden erst nach ausdrücklicher Zustimmung geladen oder
+          extern geöffnet.
         </p>
       </section>
       <section>
-        <h2>5. Vimeo-Video</h2>
+        <h2>5. YouTube-Videos</h2>
         <p>
-          Auf dieser Website kann ein Video des Anbieters Vimeo geladen werden.
+          Auf dieser Website können Videos des Anbieters YouTube geladen werden.
           Eingebettete Videos werden erst nach ausdrücklicher Zustimmung
-          geladen. Weitere Teaser sind lediglich extern verlinkt. Beim Laden
-          eines Videos oder Anklicken eines Vimeo-Links wird eine Verbindung zu
-          Vimeo hergestellt; dabei können insbesondere IP-Adresse und
-          technische Nutzungsdaten übertragen werden. Anbieter ist Vimeo.com,
-          Inc., 330 West 34th Street, New York, New York 10001, USA.
+          geladen. Beim Laden eines Videos oder Anklicken eines YouTube-Links
+          wird eine Verbindung zu YouTube hergestellt; dabei können insbesondere
+          IP-Adresse und technische Nutzungsdaten übertragen werden. Anbieter
+          ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4,
+          Irland.
         </p>
       </section>
       <section>

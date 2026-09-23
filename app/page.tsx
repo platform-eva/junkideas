@@ -4,7 +4,7 @@ import CreditsDisclosure from "@/components/CreditsDisclosure";
 import DetailMoodImage from "@/components/DetailMoodImage";
 import Hero from "@/components/Hero";
 import ProjectCard from "@/components/ProjectCard";
-import VimeoEmbed from "@/components/VimeoEmbed";
+import VideoEmbed from "@/components/VideoEmbed";
 
 const featuredProjects = [
   {
@@ -76,7 +76,7 @@ export default function Home() {
           </div>
         </div>
 
-        <VimeoEmbed title="The Secret of the Charango" videoId="835266930" />
+        <VideoEmbed title="The Secret of the Charango" videoId="qC69nvRwEco" />
 
         <div className="charango-info mt-12 grid gap-12 lg:grid-cols-[1fr_1fr]">
           <CreditsDisclosure>
@@ -141,11 +141,10 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <VimeoEmbed
-          embedEnabled={false}
-          externalUrl="https://vimeo.com/manage/videos/1122993615"
+        <VideoEmbed
+          externalUrl="https://youtu.be/YAyaFgAnXL4"
           title="My mother's dress · Teaser"
-          videoId="1122993615"
+          videoId="YAyaFgAnXL4"
         />
         <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_1fr]">
           <CreditsDisclosure>
