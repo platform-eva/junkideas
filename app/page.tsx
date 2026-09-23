@@ -29,6 +29,8 @@ const featuredProjects = [
     accent: "rose" as const,
     label: "Teaser & Details",
     status: "Work in progress",
+    imageSrc: "/images/my-mothers-dress-forest.webp",
+    imageAlt: "Schwarzweißes Waldbild aus Das Kleid meiner Mutter",
   },
 ];
 
@@ -126,7 +128,10 @@ export default function Home() {
       </section>
 
       <section className="film-detail page-shell pb-20 sm:pb-28" id="mothers-dress">
-        <DetailMoodImage />
+        <DetailMoodImage
+          imageAlt="Schwarzweißes Waldbild aus Das Kleid meiner Mutter"
+          imageSrc="/images/my-mothers-dress-forest.webp"
+        />
         <div className="mb-10 grid gap-8 border-t border-ink/20 pt-12 lg:grid-cols-[0.45fr_1.55fr]">
           <div>
             <p className="eyebrow">Work in Progress</p>
@@ -180,6 +185,8 @@ export default function Home() {
             category="Film"
             description="Ein Spielfilm in Entwicklung. Koproduktion und Musik: Bärbel Junk."
             href="https://www.instagram.com/baerbeljunk/"
+            imageAlt="Poster des Films Pianoman"
+            imageSrc="/images/pianoman-poster.webp"
             label="Auf Instagram folgen"
             status="In Entwicklung"
             title="Pianoman by Felipe Quiroga"
