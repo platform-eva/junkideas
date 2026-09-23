@@ -273,9 +273,21 @@ export default function Home() {
           </div>
         </div>
         <div className="mt-12 grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-          <div className="about-monogram">
-            <span>BJ</span>
-            <p>Idee · Regie · Produktion · Musik</p>
+          <div className="about-identity">
+            <div className="about-monogram">
+              <span>BJ</span>
+              <p>Idee · Regie · Produktion · Musik</p>
+            </div>
+            <figure className="about-direct-portrait">
+              <Image
+                alt="Bärbel Junk schaut direkt in die Kamera"
+                className="object-cover"
+                fill
+                sizes="(max-width: 1024px) 100vw, 26rem"
+                src="/images/baerbel-junk-direct-portrait.webp"
+              />
+              <figcaption>Bärbel Junk</figcaption>
+            </figure>
           </div>
           <div className="grid gap-8 text-lg leading-relaxed text-ink/75 sm:grid-cols-2">
             <p>

@@ -699,6 +699,47 @@ button:focus-visible {
   text-transform: uppercase;
 }
 
+.about-identity {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.about-direct-portrait {
+  position: relative;
+  min-height: clamp(18rem, 30vw, 25rem);
+  overflow: hidden;
+  border: 1px solid rgba(185, 154, 91, 0.26);
+  background: var(--stone);
+}
+
+.about-direct-portrait::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 54%, rgba(0, 0, 0, 0.64));
+  content: "";
+  pointer-events: none;
+}
+
+.about-direct-portrait img {
+  filter: saturate(0.86) contrast(1.02);
+  object-position: 50% 42%;
+}
+
+.about-direct-portrait figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.42);
+  padding-top: 0.8rem;
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
 .feature-statement {
   background: var(--black-soft);
 }
