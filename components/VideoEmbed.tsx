@@ -2,14 +2,29 @@
 
 import { useState } from "react";
 
+function TextPair({ de, en }: { de: string; en?: string }) {
+  if (!en || en === de) {
+    return de;
+  }
+
+  return (
+    <>
+      <span className="lang-de">{de}</span>
+      <span className="lang-en">{en}</span>
+    </>
+  );
+}
+
 export default function VideoEmbed({
   embedEnabled = true,
   externalUrl,
+  headingEn,
   videoId,
   title,
 }: {
   embedEnabled?: boolean;
   externalUrl?: string;
+  headingEn?: string;
   videoId: string;
   title: string;
 }) {
@@ -20,7 +35,7 @@ export default function VideoEmbed({
       <div className="video-consent">
         <div>
           <p className="eyebrow">YouTube Teaser</p>
-          <h3>{title} ansehen</h3>
+          <h3><TextPair de={`${title} ansehen`} en={headingEn} /></h3>
           <p>
             Der Teaser ist auf YouTube abrufbar. Beim Öffnen werden Daten an
             YouTube übertragen.
@@ -55,7 +70,7 @@ export default function VideoEmbed({
     <div className="video-consent">
       <div>
         <p className="eyebrow">YouTube Video</p>
-        <h3>{title} ansehen</h3>
+        <h3><TextPair de={`${title} ansehen`} en={headingEn} /></h3>
         <p>
           Beim Laden des Videos werden Daten an YouTube übertragen. Weitere
           Informationen stehen in der Datenschutzerklärung.

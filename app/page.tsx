@@ -15,19 +15,22 @@ const featuredProjects = [
       "An intercultural film shaped by movement, original music and encounters across two countries.",
     href: "#charango",
     accent: "sun" as const,
-    label: "Film & Details",
+    label: "Ansehen",
+    labelEn: "Watch",
     imageSrc: "/images/charango-poster.webp",
     imageAlt: "Poster des Films The Secret of the Charango",
   },
   {
-    title: "My mother's dress",
+    title: "Das Kleid meiner Mutter",
+    titleEn: "My mother´s dress",
     category: "Autobiographical Documentary",
     year: "Germany & Bolivia, 2026",
     description:
       "An experimental documentary project about memory, inheritance and the stories carried by a dress.",
     href: "#mothers-dress",
     accent: "rose" as const,
-    label: "Teaser & Details",
+    label: "Teaser ansehen",
+    labelEn: "Watch Teaser",
     status: "Work in progress",
     imageSrc: "/images/my-mothers-dress-forest.webp",
     imageAlt: "Schwarzweißes Waldbild aus Das Kleid meiner Mutter",
@@ -78,7 +81,7 @@ export default function Home() {
           </div>
         </div>
 
-        <VideoEmbed title="The Secret of the Charango" videoId="qC69nvRwEco" />
+        <VideoEmbed headingEn="The Secret of the Charango Watch" title="The Secret of the Charango" videoId="qC69nvRwEco" />
 
         <div className="charango-info mt-12 grid gap-12 lg:grid-cols-[1fr_1fr]">
           <CreditsDisclosure>
@@ -138,7 +141,7 @@ export default function Home() {
             <p className="mt-4 text-sm text-ink/45">Deutschland & Bolivien · 2026</p>
           </div>
           <div>
-            <h2 className="section-title max-w-5xl">My mother&apos;s dress</h2>
+            <h2 className="section-title max-w-5xl"><span className="lang-de">Das Kleid meiner Mutter</span><span className="lang-en">My mother´s dress</span></h2>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink/65">
               Ein experimentelles autobiografisches Dokumentarfilmprojekt über
               Erinnerung, Herkunft und die Geschichten, die ein Kleid in sich
@@ -148,7 +151,8 @@ export default function Home() {
         </div>
         <VideoEmbed
           externalUrl="https://youtu.be/YAyaFgAnXL4"
-          title="My mother's dress · Teaser"
+          headingEn="My mother´s dress - Watch Teaser"
+          title="Das Kleid meiner Mutter · Teaser"
           videoId="YAyaFgAnXL4"
         />
         <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_1fr]">
@@ -182,15 +186,18 @@ export default function Home() {
         <div className="collaborations-grid grid gap-6 lg:grid-cols-3">
           <ProjectCard
             accent="blue"
-            category="Film"
-            description="Ein Spielfilm in Entwicklung. Koproduktion und Musik: Bärbel Junk."
-            href="https://www.instagram.com/baerbeljunk/"
+            category="Spielfilm"
+            categoryEn="Feature Film"
+            description="Koproduktion und Musik: Bärbel Junk."
+            descriptionEn="Co-production and music: Bärbel Junk."
+            href="https://www.instagram.com/pianoman.lapelicula/"
             imageAlt="Poster des Films Pianoman"
             imageSrc="/images/pianoman-poster.webp"
             label="Auf Instagram folgen"
-            status="In Entwicklung"
+            labelEn="Follow on Instagram"
             title="Pianoman by Felipe Quiroga"
-            year="Bolivien, 2026"
+            year="Bolivien 2026"
+            yearEn="Bolivia 2026"
           />
           <ProjectCard
             accent="green"
@@ -211,7 +218,7 @@ export default function Home() {
             imageAlt="Buchcover Beim Friseur von Tabea Michel und Josephine Raab"
             imageSrc="/images/beim Friseur.png"
             label="Buch entdecken"
-            title="Beim Frisör"
+            title="Beim Friseur"
             year="Nach dem Kinderbuch von Tabea Michel"
           />
         </div>
@@ -225,34 +232,35 @@ export default function Home() {
           </div>
           <div>
             <h2 className="section-title max-w-4xl">
-              Neue Termine sind in Planung.
+              Neue Veranstaltungen.
             </h2>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-ink/60">
-              Aktuell gibt es keine öffentlichen Termine. Neue Screenings,
-              Konzerte und Aufführungen werden hier veröffentlicht.
+              Neue Aufführungen, Screenings und Festivaltermine werden hier
+              gesammelt. Weitere Daten folgen, sobald sie veröffentlicht sind.
             </p>
           </div>
         </div>
         <div className="live-archive">
           <div className="live-archive-heading">
-            <p className="eyebrow">Ausgewählte Rückblicke</p>
-            <p>Screenings · Konzerte · Aufführungen</p>
+            <p className="eyebrow">Aktuelle Veranstaltungen</p>
+            <p>Screenings · Lesung · Festival</p>
           </div>
           <div className="live-archive-list">
             <article>
-              <span>Screening</span>
-              <h3>The Secret of the Charango</h3>
-              <p>Experimenteller Kurzfilm · Bolivien & Deutschland</p>
-            </article>
-            <article>
-              <span>Musiktheater</span>
-              <h3>Von Ümpfen, Strümpfen und (K)Einhörnern</h3>
-              <p>Die Glorreichen Fünf</p>
-            </article>
-            <article>
               <span>Lesung & Musik</span>
-              <h3>Beim Frisör</h3>
-              <p>Szenisch-musikalische Lesung</p>
+              <h3>Beim Friseur</h3>
+              <p>10.10., 17 Uhr · Familienzentrum Stresow</p>
+            </article>
+            <article>
+              <span>Festival</span>
+              <h3>Weltpremiere Pianoman</h3>
+              <p>Im Wettbewerb des Internationalen Filmfestivals Mannheim Heidelberg.</p>
+              <a className="text-link mt-4 inline-flex" href="https://www.iffmh.de/programm/index_ger.html" rel="noreferrer" target="_blank">IFFMH-Programm öffnen ↗</a>
+            </article>
+            <article>
+              <span>Hinweis</span>
+              <h3>IFFMH-Termine</h3>
+              <p>Das Programm wird am 16.10. veröffentlicht. Die genauen Daten werden ergänzt.</p>
             </article>
           </div>
         </div>
@@ -316,7 +324,7 @@ export default function Home() {
               Erinnerungen und Orte plötzlich miteinander sprechen.
             </p>
             <p>
-              Film und Musik sind für mich Wege, diesen Begegnungen eine Form
+              Film und Musik sind für mich Wege, diesen Momenten eine Form
               zu geben und sie mit anderen zu teilen.
             </p>
           </div>
@@ -334,9 +342,9 @@ export default function Home() {
             <p>
               Junkideas is where curiosity becomes cinema, music and theatre.
             </p>
-            <Link className="button-dark" href="#contact">
+            <a className="button-dark" href="mailto:webmaster@junkideas.de">
               Kontakt aufnehmen
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -358,11 +366,9 @@ export default function Home() {
             </p>
             <a
               className="button-dark mt-10 inline-flex"
-              href="https://www.instagram.com/baerbeljunk/"
-              rel="noreferrer"
-              target="_blank"
+              href="mailto:webmaster@junkideas.de"
             >
-              Instagram öffnen ↗
+              E-Mail schreiben ↗
             </a>
           </div>
         </div>
