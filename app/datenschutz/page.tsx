@@ -15,7 +15,7 @@ export default function DatenschutzPage() {
           <br />
           Heidenburgstr. 44, 66879 Oberstaufenbach
           <br />
-          E-Mail: <a href="mailto:baerbel.junk@gmx.de">baerbel.junk@gmx.de</a>
+          E-Mail: <a href="mailto:webmaster@junkideas.de">webmaster@junkideas.de</a>
         </p>
       </section>
       <section>
@@ -30,12 +30,23 @@ export default function DatenschutzPage() {
         <p>
           Die Website wird voraussichtlich über Vercel Inc. bereitgestellt.
           Dabei kann eine Verarbeitung von Daten in den USA stattfinden. Vor
-          Veröffentlichung müssen der tatsächliche Hosting-Anbieter und die
-          verwendeten Datenschutzvereinbarungen geprüft werden.
+          Veröffentlichung müssen der tatsächliche Hosting-Anbieter, dessen
+          Auftragsverarbeitungsvertrag und mögliche Drittlandübermittlungen
+          abschließend geprüft werden.
         </p>
       </section>
       <section>
-        <h2>3. Cookies, Analyse und Kontaktformulare</h2>
+        <h2>3. Sprachwahl und lokale Speicherung</h2>
+        <p>
+          Die Website speichert die gewählte Spracheinstellung im lokalen
+          Speicher des Browsers (Local Storage). Diese Information bleibt auf
+          dem verwendeten Gerät gespeichert und wird nicht an die Betreiberin
+          übermittelt. Sie kann jederzeit über die Browser-Einstellungen
+          gelöscht werden.
+        </p>
+      </section>
+      <section>
+        <h2>4. Cookies, Analyse und Kontaktformulare</h2>
         <p>
           Diese Website verwendet derzeit keine Analyse- oder Marketingdienste,
           setzt keine nicht erforderlichen Cookies und enthält kein
@@ -44,7 +55,7 @@ export default function DatenschutzPage() {
         </p>
       </section>
       <section>
-        <h2>4. Externe Links</h2>
+        <h2>5. Externe Links</h2>
         <p>
           Die Website verlinkt auf externe Angebote, insbesondere YouTube,
           Instagram und Projektseiten Dritter. Beim Anklicken gelten die
@@ -54,19 +65,19 @@ export default function DatenschutzPage() {
         </p>
       </section>
       <section>
-        <h2>5. YouTube-Videos</h2>
+        <h2>6. YouTube-Videos</h2>
         <p>
           Auf dieser Website können Videos des Anbieters YouTube geladen werden.
-          Eingebettete Videos werden erst nach ausdrücklicher Zustimmung
-          geladen. Beim Laden eines Videos oder Anklicken eines YouTube-Links
-          wird eine Verbindung zu YouTube hergestellt; dabei können insbesondere
-          IP-Adresse und technische Nutzungsdaten übertragen werden. Anbieter
-          ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4,
-          Irland.
+          Eingebettete Videos werden über die Domain youtube-nocookie.com erst
+          nach ausdrücklicher Zustimmung geladen. Beim Laden eines Videos oder
+          Anklicken eines YouTube-Links wird eine Verbindung zu YouTube bzw.
+          Google hergestellt; dabei können insbesondere IP-Adresse und
+          technische Nutzungsdaten übertragen werden. Anbieter ist Google
+          Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland.
         </p>
       </section>
       <section>
-        <h2>6. Rechte betroffener Personen</h2>
+        <h2>7. Rechte betroffener Personen</h2>
         <p>
           Betroffene Personen haben im Rahmen der gesetzlichen Voraussetzungen
           das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der
@@ -75,10 +86,10 @@ export default function DatenschutzPage() {
         </p>
       </section>
       <section>
-        <h2>7. Stand und Änderungen</h2>
+        <h2>8. Stand und Änderungen</h2>
         <p>
-          Stand: Juni 2026. Diese Datenschutzerklärung muss angepasst werden,
-          wenn weitere Dienste, eingebettete Medien, Formulare,
+          Stand: September 2026. Diese Datenschutzerklärung muss angepasst
+          werden, wenn weitere Dienste, eingebettete Medien, Formulare,
           Analysewerkzeuge oder Cookies eingesetzt werden.
         </p>
       </section>
