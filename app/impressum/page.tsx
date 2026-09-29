@@ -40,6 +40,13 @@ export default function ImpressumPage() {
           Rechteinhaberin oder des jeweiligen Rechteinhabers.
         </p>
       </section>
+      <section>
+        <h2>Bildnachweise</h2>
+        <p>
+          Fotos und Bildmaterial auf dieser Website: Alice Michelle Coronel
+          Almaraz und Thomas Hartmann, soweit nicht anders angegeben.
+        </p>
+      </section>
     </LegalPage>
   );
 }

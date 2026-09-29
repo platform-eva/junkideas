@@ -10,6 +10,9 @@ export default function Footer() {
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-ink/55">
             Independent film, original music and theatre by Bärbel Junk.
           </p>
+          <p className="mt-4 max-w-sm text-xs leading-relaxed text-ink/40">
+            Bildnachweise: Alice Michelle Coronel Almaraz und Thomas Hartmann.
+          </p>
         </div>
         <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm font-bold uppercase tracking-wider sm:justify-end">
           <Link href="/#projects">Projekte</Link>
