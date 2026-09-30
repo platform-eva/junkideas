@@ -24,7 +24,7 @@ export default function ImpressumPage() {
       </section>
       <section>
         <h2>Kontakt</h2>
-        <p>E-Mail: <a href="mailto:webmaster@junkideas.de">webmaster@junkideas.de</a></p>
+        <p>E-Mail: <a href="mailto:mail@junkideas.de">mail@junkideas.de</a></p>
       </section>
       <section>
         <h2>Redaktionell verantwortlich</h2>

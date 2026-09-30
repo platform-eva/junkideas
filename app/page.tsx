@@ -342,7 +342,7 @@ export default function Home() {
             <p>
               Junkideas is where curiosity becomes cinema, music and theatre.
             </p>
-            <a className="button-dark" href="mailto:webmaster@junkideas.de">
+            <a className="button-dark" href="mailto:mail@junkideas.de">
               Kontakt aufnehmen
             </a>
           </div>
@@ -366,7 +366,7 @@ export default function Home() {
             </p>
             <a
               className="button-dark mt-10 inline-flex"
-              href="mailto:webmaster@junkideas.de"
+              href="mailto:mail@junkideas.de"
             >
               E-Mail schreiben ↗
             </a>

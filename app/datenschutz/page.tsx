@@ -15,7 +15,7 @@ export default function DatenschutzPage() {
           <br />
           Heidenburgstr. 44, 66879 Oberstaufenbach
           <br />
-          E-Mail: <a href="mailto:webmaster@junkideas.de">webmaster@junkideas.de</a>
+          E-Mail: <a href="mailto:mail@junkideas.de">mail@junkideas.de</a>
         </p>
       </section>
       <section>
