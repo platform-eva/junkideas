@@ -13,7 +13,7 @@ export default function DatenschutzPage() {
           <br />
           Walter-Friedrich-Str. 55, 13125 Berlin
           <br />
-          Heidenburgstr. 44, 66879 Oberstaufenbach
+          Heidenburgerstraße 43, 66879 Oberstaufenbach
           <br />
           E-Mail: <a href="mailto:mail@junkideas.de">mail@junkideas.de</a>
         </p>

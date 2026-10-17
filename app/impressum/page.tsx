@@ -15,7 +15,7 @@ export default function ImpressumPage() {
           <br />
           13125 Berlin
           <br />
-          Heidenburgstr. 44
+          Heidenburgerstraße 43
           <br />
           66879 Oberstaufenbach
           <br />
