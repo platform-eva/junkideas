@@ -192,7 +192,7 @@ export default function Home() {
             descriptionEn="Co-production and music: Bärbel Junk."
             href="https://www.instagram.com/pianoman.lapelicula/"
             imageAlt="Poster des Films Pianoman"
-            imageSrc="/images/pianoman-poster.webp"
+            imageSrc="/images/pianoman-poster-iffmh.png"
             label="Auf Instagram folgen"
             labelEn="Follow on Instagram"
             title="Pianoman by Felipe Quiroga"
