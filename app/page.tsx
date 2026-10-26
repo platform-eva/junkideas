@@ -254,13 +254,27 @@ export default function Home() {
             <article>
               <span>Festival</span>
               <h3>Weltpremiere Pianoman</h3>
-              <p>Im Wettbewerb des Internationalen Filmfestivals Mannheim Heidelberg.</p>
-              <a className="text-link mt-4 inline-flex" href="https://www.iffmh.de/programm/index_ger.html" rel="noreferrer" target="_blank">IFFMH-Programm öffnen ↗</a>
+              <div>
+                <p>Internationales Filmfestival Mannheim Heidelberg · Regie: Felipe Quiroga</p>
+                <p className="mt-4">
+                  Ein einst gefeierter Musiker in Bolivien erhält die Chance auf
+                  einen großen Auftritt. Während sein Bühnenanzug verschwunden
+                  ist, hofft er auf ein Wiedersehen mit seiner Tochter. Eine
+                  Tragikomödie über Musik, Familie und eine neue Chance.
+                </p>
+                <p className="mt-4">Bolivien · 2026 · 86 Min. · Spanisch mit deutschen und englischen Untertiteln</p>
+                <a className="text-link mt-4 inline-flex" href="https://www.iffmh.de/festival/unser-filmprogramm/filme/pianoman/index_ger.html" rel="noreferrer" target="_blank">Film, Termine & Tickets beim IFFMH ↗</a>
+              </div>
             </article>
             <article>
-              <span>Hinweis</span>
-              <h3>IFFMH-Termine</h3>
-              <p>Das Programm wird am 16.10. veröffentlicht. Die genauen Daten werden ergänzt.</p>
+              <span>Screenings</span>
+              <h3>Pianoman · Termine</h3>
+              <ul className="space-y-3">
+                <li><p>10.11.2026 · 18:00 Uhr · Cinema Quadrat, Mannheim</p></li>
+                <li><p>10.11.2026 · 20:45 Uhr · Gloria, Heidelberg</p></li>
+                <li><p>11.11.2026 · 17:45 Uhr · Karlstorkino, Heidelberg</p></li>
+                <li><p>14.11.2026 · 17:45 Uhr · Planken Lichtspiele (Saal 6), Mannheim</p></li>
+              </ul>
             </article>
           </div>
         </div>
